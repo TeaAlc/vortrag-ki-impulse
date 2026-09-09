@@ -476,7 +476,7 @@ audio {
 }
 
 .chapter-composition h2 {
-  max-width: 14ch;
+  max-width: none;
   font-size: clamp(3.1rem, 7.5vw, 6rem);
 }
 

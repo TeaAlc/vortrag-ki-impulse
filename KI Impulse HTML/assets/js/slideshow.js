@@ -15,10 +15,18 @@
   var overviewList = document.querySelector("[data-overview-list]");
   var fullscreenButton = document.querySelector("[data-action='fullscreen']");
   var audios = Array.prototype.slice.call(document.querySelectorAll("audio"));
+  var zoomableImages = Array.prototype.slice.call(document.querySelectorAll(".slide img"));
+  var lightbox = document.getElementById("image-lightbox");
+  var lightboxImage = document.querySelector("[data-lightbox-image]");
+  var lightboxCaption = document.querySelector("[data-lightbox-caption]");
+  var lightboxCounter = document.querySelector("[data-lightbox-counter]");
   var overviewLinks = [];
   var visibility = new Map();
   var activeIndex = 0;
   var touchStart = null;
+  var lightboxTouchStart = null;
+  var lightboxIndex = 0;
+  var lightboxReturnFocus = null;
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   totalOutput.textContent = String(slides.length);
@@ -101,6 +109,32 @@
     if (bestRatio >= 0) setActive(bestIndex, true);
   }
 
+  function updateLightbox(index) {
+    lightboxIndex = (index + zoomableImages.length) % zoomableImages.length;
+    var source = zoomableImages[lightboxIndex];
+    var description = source.getAttribute("alt") || "Vergrößertes Präsentationsbild";
+    lightboxImage.src = source.currentSrc || source.src;
+    lightboxImage.alt = description;
+    lightboxCaption.textContent = description;
+    lightboxCounter.textContent = (lightboxIndex + 1) + " / " + zoomableImages.length;
+  }
+
+  function openLightbox(index, trigger) {
+    lightboxReturnFocus = trigger;
+    updateLightbox(index);
+    if (typeof lightbox.showModal === "function") lightbox.showModal();
+    else lightbox.setAttribute("open", "");
+    lightbox.querySelector("[data-action='close-lightbox']").focus();
+  }
+
+  function closeLightbox() {
+    if (typeof lightbox.close === "function") lightbox.close();
+    else {
+      lightbox.removeAttribute("open");
+      if (lightboxReturnFocus) lightboxReturnFocus.focus();
+    }
+  }
+
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -148,6 +182,22 @@
     overviewLinks.push(link);
   });
 
+  zoomableImages.forEach(function (image, index) {
+    image.classList.add("zoomable-image");
+    image.setAttribute("tabindex", "0");
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", "Bild vergrößern: " + (image.getAttribute("alt") || "Präsentationsbild"));
+    image.addEventListener("click", function (event) {
+      if (event.button === 0) openLightbox(index, image);
+    });
+    image.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(index, image);
+      }
+    });
+  });
+
   document.addEventListener("click", function (event) {
     var actionTarget = event.target.closest("[data-action]");
     if (!actionTarget) return;
@@ -175,11 +225,29 @@
         fullscreenButton.textContent = "Nicht verfügbar";
         fullscreenButton.title = "Dieser Browser unterstützt die Fullscreen API nicht.";
       }
+    } else if (action === "close-lightbox") {
+      closeLightbox();
+    } else if (action === "previous-image") {
+      updateLightbox(lightboxIndex - 1);
+    } else if (action === "next-image") {
+      updateLightbox(lightboxIndex + 1);
     }
   });
 
   document.addEventListener("keydown", function (event) {
     if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+
+    if (lightbox.open) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        updateLightbox(lightboxIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        updateLightbox(lightboxIndex + 1);
+      }
+      return;
+    }
+
     var interactive = event.target.closest("a, button, audio, input, select, textarea, summary, [contenteditable='true']");
     if (interactive) return;
 
@@ -196,7 +264,7 @@
   });
 
   document.addEventListener("touchstart", function (event) {
-    if (event.touches.length !== 1 || event.target.closest("audio, .table-scroll, .details-panel__body")) return;
+    if (lightbox.open || event.touches.length !== 1 || event.target.closest("audio, .table-scroll, .details-panel__body")) return;
     touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
   }, { passive: true });
 
@@ -233,6 +301,29 @@
   overview.addEventListener("click", function (event) {
     if (event.target === overview) overview.close();
   });
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox || event.target.classList.contains("lightbox__figure")) closeLightbox();
+  });
+
+  lightbox.addEventListener("close", function () {
+    lightboxImage.removeAttribute("src");
+    if (lightboxReturnFocus) lightboxReturnFocus.focus();
+  });
+
+  lightbox.addEventListener("touchstart", function (event) {
+    if (event.touches.length !== 1) return;
+    lightboxTouchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+  }, { passive: true });
+
+  lightbox.addEventListener("touchend", function (event) {
+    if (!lightboxTouchStart || !event.changedTouches.length) return;
+    var deltaX = event.changedTouches[0].clientX - lightboxTouchStart.x;
+    var deltaY = event.changedTouches[0].clientY - lightboxTouchStart.y;
+    lightboxTouchStart = null;
+    if (Math.abs(deltaX) < 55 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
+    updateLightbox(lightboxIndex + (deltaX < 0 ? 1 : -1));
+  }, { passive: true });
 
   var initialIndex = validHashIndex();
   if (initialIndex < 0) initialIndex = 0;

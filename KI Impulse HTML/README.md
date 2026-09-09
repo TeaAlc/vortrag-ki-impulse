@@ -10,6 +10,7 @@
 - Direkte Auswahl: Schaltfläche **Übersicht**
 - Präsentationsmodus: Schaltfläche **Vollbild**
 - Mobil: scrollen oder horizontal wischen
+- Bild vergrößern: Bild anklicken; in der Großansicht mit Pfeilen oder Wischen wechseln und mit `Esc` schließen
 
 Audio startet nur über die Bedienelemente des jeweiligen Players. Beim Folienwechsel wird laufendes Audio gestoppt.
 

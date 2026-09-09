@@ -69,7 +69,7 @@
 
     <section class="slide slide--media slide--original" id="wahlplakat" data-title="Wahlplakat" tabindex="-1">
       <div class="slide__content split split--portrait">
-        <div class="copy"><p class="section-mark">Bildbeispiel</p><h2>Ein fiktives Wahlplakat</h2><p>Natürlich lassen sich auch Wahlplakate entwerfen – hier für die fiktive „Gothic Partei Deutschlands – Kultur, Freiheit, Individualität“.</p><p class="note">Das Motiv wird als Originalbeispiel gezeigt. Seine Symbole werden nicht in das Präsentationstheme übernommen.</p></div>
+        <div class="copy"><p class="section-mark">Bildbeispiel</p><h2>Ein fiktives Wahlplakat</h2><p>Natürlich lassen sich auch Wahlplakate entwerfen – hier für die fiktive „Gothic Partei Deutschlands – Kultur, Freiheit, Individualität“.</p></div>
         <figure class="media-frame media-frame--portrait"><img src="assets/images/gpd-wahlplakat.png" alt="Fiktives schwarzes GPD-Wahlplakat mit silberner Schrift, violetten Akzenten, Kathedralensilhouetten und Rabe." loading="lazy"></figure>
       </div>
     </section>
@@ -236,6 +236,19 @@
   <dialog id="slide-overview" class="overview" aria-labelledby="overview-title">
     <div class="overview__header"><h2 id="overview-title">Folienübersicht</h2><button type="button" data-action="close-overview" aria-label="Übersicht schließen">Schließen</button></div>
     <nav class="overview__grid" aria-label="Zu einer Folie springen" data-overview-list></nav>
+  </dialog>
+
+  <dialog id="image-lightbox" class="lightbox" aria-label="Bildansicht">
+    <div class="lightbox__bar">
+      <output class="lightbox__counter" data-lightbox-counter aria-live="polite"></output>
+      <button type="button" data-action="close-lightbox" aria-label="Bildansicht schließen">Schließen</button>
+    </div>
+    <button class="lightbox__nav lightbox__nav--previous" type="button" data-action="previous-image" aria-label="Vorheriges Bild">←</button>
+    <figure class="lightbox__figure">
+      <img data-lightbox-image src="assets/images/paris-eiffelturm-ki-1.png" alt="">
+      <figcaption data-lightbox-caption></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-action="next-image" aria-label="Nächstes Bild">→</button>
   </dialog>
 
   <noscript><p class="noscript-note">JavaScript ist deaktiviert. Alle Folien bleiben lesbar; Navigation ist über Scrollen und die Adressen der Überschriften möglich.</p></noscript>

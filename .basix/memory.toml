@@ -17,3 +17,9 @@ date = "2026-09-09"
 category = "Verification"
 insight = "For scroll-snap slideshows, keep adjacent motion smooth but make Home, End, and distant hash jumps instant; observer-driven hash updates otherwise settle on intermediate slides."
 usefulness = 1
+
+[[entries]]
+date = "2026-09-09"
+category = "Verification"
+insight = "For portable file-based slideshows, eagerly load slide images; lazy loading can appear as placeholders after direct hash navigation. Verify renamed media byte-for-byte against Markdown sources."
+usefulness = 1

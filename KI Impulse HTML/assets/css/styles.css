@@ -603,6 +603,45 @@ audio {
   background: var(--violet-dark);
 }
 
+.rag-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.rag-layout .media-frame--contain img {
+  max-height: 49svh;
+}
+
+.dialogue--compact .bubble {
+  max-width: 96%;
+  margin-bottom: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  font-size: clamp(0.82rem, 1.05vw, 1.08rem);
+  line-height: 1.24;
+}
+
+.dialogue--compact .bubble--answer {
+  margin-left: auto;
+}
+
+.bubble--system {
+  margin-inline: auto;
+  background: var(--surface-soft);
+  color: var(--muted);
+}
+
+.bubble--system span {
+  color: var(--signal);
+}
+
+.rag-note {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.82em;
+}
+
 .context-flow {
   display: flex;
   align-items: stretch;
@@ -726,27 +765,45 @@ audio {
   font-size: 0.84em;
 }
 
-.metric-quote {
+.metric-panel {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 0.7rem 1.2rem;
-  padding: clamp(1.4rem, 3vw, 3rem) !important;
+  gap: clamp(0.9rem, 1.8vw, 1.5rem);
+  align-self: center;
+  min-width: 0;
+  padding: clamp(1.25rem, 2.4vw, 2.25rem);
+  border-left: 1px solid var(--violet-muted);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
 }
 
-.metric-quote strong {
+.metric {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.metric + .metric {
+  padding-top: clamp(0.9rem, 1.6vw, 1.35rem);
+  border-top: 1px solid var(--line);
+}
+
+.metric strong {
   color: var(--violet-bright);
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  white-space: nowrap;
+  font-size: clamp(1.9rem, 3.2vw, 3.25rem);
+  line-height: 1.03;
 }
 
-.metric-quote cite {
-  grid-column: 1 / -1;
+.metric-context {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.72em;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 0.86em;
+  line-height: 1.35;
+}
+
+.metric-panel .source {
+  margin-top: 0;
 }
 
 .table-scroll {
@@ -1213,6 +1270,15 @@ td:nth-child(5) {
     margin: 2rem 0;
   }
 
+  .rag-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dialogue--compact .bubble {
+    max-width: 92%;
+    font-size: 1rem;
+  }
+
   .context-flow strong {
     flex: auto;
   }
@@ -1262,16 +1328,9 @@ td:nth-child(5) {
     max-width: 92%;
   }
 
-  .metric-quote {
+  .metric {
     grid-template-columns: 1fr;
-  }
-
-  .metric-quote strong {
-    white-space: normal;
-  }
-
-  .metric-quote cite {
-    grid-column: auto;
+    gap: 0.35rem;
   }
 
   .lightbox[open] {

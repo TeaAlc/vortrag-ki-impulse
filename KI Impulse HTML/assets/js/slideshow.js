@@ -117,6 +117,10 @@
     lightboxIndex = (index + zoomableImages.length) % zoomableImages.length;
     var source = zoomableImages[lightboxIndex];
     var description = source.getAttribute("alt") || "Vergrößertes Präsentationsbild";
+    lightboxImage.onerror = function () {
+      lightboxImage.onerror = null;
+      lightboxImage.src = source.src;
+    };
     lightboxImage.src = source.currentSrc || source.src;
     lightboxImage.alt = description;
     lightboxCaption.textContent = description;
@@ -311,7 +315,6 @@
   });
 
   lightbox.addEventListener("close", function () {
-    lightboxImage.removeAttribute("src");
     if (lightboxReturnFocus) lightboxReturnFocus.focus();
   });
 

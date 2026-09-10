@@ -1,6 +1,12 @@
 version = 1
 
 [[entries]]
+date = "2026-09-10"
+category = "Tooling"
+insight = "For presentation browser checks, reuse Playwright in /tmp/ki-impulse-run/node_modules and browsers in /tmp/ki-impulse-playwright. Browser launch requires sandbox escalation; wait for hash navigation before screenshots."
+usefulness = 0
+
+[[entries]]
 date = "2026-09-09"
 category = "Repository"
 insight = "The source Vault is `KI Impulse`; the portable presentation is delivered separately in `KI Impulse HTML`. Never rename or modify Vault media when preparing the slideshow."

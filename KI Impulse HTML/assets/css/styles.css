@@ -314,6 +314,11 @@ blockquote {
   padding-left: clamp(0rem, 8vw, 10rem);
 }
 
+.title-composition h1 {
+  white-space: nowrap;
+  font-size: clamp(2rem, 6vw, 6rem);
+}
+
 .title-avatar {
   border: 0;
   position: absolute;
@@ -337,7 +342,7 @@ blockquote {
 .audio-block--intro {
   width: min(34rem, 100%);
   margin-top: clamp(1.5rem, 4vw, 4rem);
-  border-top: 2px solid var(--signal);
+  border-top: 2px solid var(--violet-bright);
 }
 
 .audio-block span,
@@ -458,22 +463,33 @@ audio {
 
 .live-prompt {
   padding: clamp(1.5rem, 4vw, 4rem);
-  border-top: 0.3rem solid var(--signal);
+  border-top: 0.3rem solid var(--violet-bright);
 }
 
 .live-prompt span {
   display: block;
   margin-bottom: 0.75rem;
-  color: var(--signal);
+  color: var(--violet-bright);
   font-weight: 700;
 }
 
 .live-prompt strong {
   display: block;
-  max-width: 12ch;
+  max-width: 22ch;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1.08;
+  font-size: clamp(1.4rem, 2.2vw, 2.3rem);
+  line-height: 1.2;
+}
+
+.demo-prompt h3,
+.demo-prompt__note {
+  color: var(--violet-bright);
+}
+
+.demo-prompt__note {
+  margin-top: 1.25rem;
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 .chapter-composition {

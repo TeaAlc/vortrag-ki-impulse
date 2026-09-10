@@ -758,13 +758,14 @@ audio {
   gap: clamp(1rem, 2vw, 2rem);
 }
 
-.hallucination-visual {
+.robot-visual {
   align-self: center;
   justify-self: center;
   width: min(100%, 32rem);
 }
 
-.hallucination-visual img {
+.robot-visual img {
+  border: 0;
   height: auto;
   max-height: 52svh;
   object-fit: contain;

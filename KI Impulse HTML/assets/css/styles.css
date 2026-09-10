@@ -707,27 +707,44 @@ audio {
 }
 
 .agent-loop {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem;
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  justify-self: center;
+  overflow: visible;
 }
 
-.agent-loop span,
-.agent-loop strong {
-  display: grid;
-  min-height: 6rem;
-  place-items: center;
-  padding: 1rem;
-  border-radius: 0.65rem;
-  background: var(--surface-raised);
-  text-align: center;
-  font-size: clamp(1.1rem, 1.6vw, 1.65rem);
+.agent-loop__segment {
+  fill: none;
+  stroke: var(--violet-dark);
+  stroke-width: 130;
 }
 
-.agent-loop strong {
-  grid-column: 1 / -1;
-  min-height: 4rem;
-  background: var(--violet-dark);
+.agent-loop__arrow {
+  fill: none;
+  stroke: var(--violet-bright);
+  stroke-width: 3;
+  color: var(--violet-bright);
+}
+
+.agent-loop__label,
+.agent-loop__center {
+  fill: var(--ink-strong);
+  text-anchor: middle;
+  font-size: 20px;
+}
+
+.agent-loop__heading {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.agent-loop__center {
+  fill: var(--muted);
+}
+
+.agent-loop__center .agent-loop__heading {
+  fill: var(--violet-bright);
 }
 
 .risk-columns {

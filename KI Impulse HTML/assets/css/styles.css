@@ -307,16 +307,13 @@ blockquote {
   padding-left: clamp(0rem, 8vw, 10rem);
 }
 
-.title-composition::after {
-  content: "";
+.title-avatar {
   position: absolute;
-  top: 5%;
-  right: 7%;
-  width: min(22vw, 22rem);
-  height: min(22vw, 22rem);
-  border: 1px solid var(--violet);
-  border-radius: 50%;
-  opacity: 0.45;
+  top: 0;
+  right: 3%;
+  width: min(28vw, 28rem);
+  height: auto;
+  object-fit: contain;
   pointer-events: none;
 }
 
@@ -1318,8 +1315,11 @@ td:nth-child(5) {
     padding-left: 0;
   }
 
-  .title-composition::after {
-    display: none;
+  .title-avatar {
+    position: static;
+    display: block;
+    width: min(60vw, 18rem);
+    margin: 1.5rem auto;
   }
 
   .split,

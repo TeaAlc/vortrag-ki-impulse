@@ -794,7 +794,8 @@ audio {
   border-top-color: var(--signal);
 }
 
-.risk-columns.risk-columns--violet article {
+.risk-columns.risk-columns--violet > article,
+.risk-columns.risk-columns--violet > .sourced-panel > article {
   border-top-color: var(--violet-bright);
 }
 

@@ -817,7 +817,7 @@ audio {
 .headline-grid img {
   width: 100%;
   height: min(35svh, 22rem);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   border-radius: 0.5rem;
   object-fit: contain;
   background: oklch(0.99 0 0);
@@ -830,7 +830,7 @@ audio {
 .headline-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .headline-text blockquote {

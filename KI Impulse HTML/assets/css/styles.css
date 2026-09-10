@@ -759,6 +759,7 @@ audio {
 }
 
 .robot-visual {
+  background: transparent;
   align-self: center;
   justify-self: center;
   width: min(100%, 32rem);

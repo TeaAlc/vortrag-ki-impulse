@@ -642,6 +642,45 @@ audio {
   font-size: 0.82em;
 }
 
+.tool-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.tool-layout .media-frame--contain img {
+  max-height: 48svh;
+}
+
+@media (min-width: 56.25rem) and (orientation: landscape) {
+  #audiogenerierung .copy h2 {
+    font-size: clamp(2.2rem, 3vw, 3.2rem);
+  }
+
+  #tool-calling .slide__header h2 {
+    font-size: clamp(2.2rem, 3.5vw, 3.6rem);
+  }
+}
+
+.tool-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--ink-strong);
+}
+
+.tool-list li + li {
+  margin-top: 0.2rem;
+}
+
+.anchor-target {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .context-flow {
   display: flex;
   align-items: stretch;
@@ -1306,6 +1345,10 @@ td:nth-child(5) {
   }
 
   .rag-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tool-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 

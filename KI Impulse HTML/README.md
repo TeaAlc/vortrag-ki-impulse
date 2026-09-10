@@ -2,6 +2,8 @@
 
 `index.html` doppelt anklicken. Es ist kein Webserver und keine Installation erforderlich.
 
+Die Präsentation umfasst 37 Folien. Die Übersicht folgt der Reihenfolge in `index.html`; die Kapitelmarken bleiben auch beim direkten Scrollen sichtbar.
+
 ## Steuerung
 
 - Nächste Folie: `→`, `↓`, `Bild↓` oder Leertaste
@@ -13,5 +15,7 @@
 - Bild vergrößern: Bild anklicken; in der Großansicht mit Pfeilen oder Wischen wechseln und mit `Esc` schließen
 
 Audio startet nur über die Bedienelemente des jeweiligen Players. Beim Folienwechsel wird laufendes Audio gestoppt.
+
+Die vierzehn Diskussionsfragen stehen gemeinsam auf der Folie „Diskussion: Chancen & Risiken“. Die Frage nach Neffe Thomas bleibt offen und ist bewusst nicht aufgelöst.
 
 Alle Pflichtressourcen liegen in `assets/`. Die Dateien in `assets/fonts/` stehen unter der dort mitgelieferten SIL Open Font License.

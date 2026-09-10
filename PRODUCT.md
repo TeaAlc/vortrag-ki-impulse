@@ -10,7 +10,7 @@ Menschen mit Interesse an KI und Politik, die einen deutschsprachigen Impulsvort
 
 ## Product Purpose
 
-„KI Impulse“ vermittelt anschaulich Anwendungen, Funktionsweisen, Chancen und Risiken künstlicher Intelligenz. Erfolg bedeutet: 37 klar gegliederte Folien, verlässliche Offline-Nutzung ohne Build-Prozess und ein guter Gesprächseinstieg nach dem Vortrag.
+„KI Impulse“ vermittelt anschaulich Anwendungen, Funktionsweisen, Chancen und Risiken künstlicher Intelligenz. Erfolg bedeutet: klar gegliederte Folien mit nachvollziehbaren Übergängen, verlässliche Offline-Nutzung ohne Build-Prozess und ein guter Gesprächseinstieg nach dem Vortrag. Die Folienzahl folgt dem Gedankengang; notwendige Erklärungen bleiben direkt sichtbar.
 
 ## Brand Personality
 

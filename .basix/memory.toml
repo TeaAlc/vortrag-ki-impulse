@@ -4,22 +4,28 @@ version = 1
 date = "2026-09-09"
 category = "Repository"
 insight = "The source Vault is `KI Impulse`; the portable presentation is delivered separately in `KI Impulse HTML`. Never rename or modify Vault media when preparing the slideshow."
-usefulness = 1
+usefulness = 2
 
 [[entries]]
 date = "2026-09-09"
 category = "User Instruction"
 insight = "Do not expose internal theme rationale or implementation notes in the presentation content; keep slides audience-facing."
-usefulness = 1
+usefulness = 2
 
 [[entries]]
 date = "2026-09-09"
 category = "Verification"
 insight = "For scroll-snap slideshows, keep adjacent motion smooth but make Home, End, and distant hash jumps instant; observer-driven hash updates otherwise settle on intermediate slides."
-usefulness = 1
+usefulness = 2
 
 [[entries]]
 date = "2026-09-09"
 category = "Verification"
 insight = "For portable file-based slideshows, eagerly load slide images; lazy loading can appear as placeholders after direct hash navigation. Verify renamed media byte-for-byte against Markdown sources."
-usefulness = 1
+usefulness = 2
+
+[[entries]]
+date = "2026-09-09"
+category = "User Instruction"
+insight = "Keep the Neffe Thomas discussion question unresolved. Do not add explanations, spoiler hints, or explicit voice-cloning connections; the audience should discover and discuss the implication."
+usefulness = 0

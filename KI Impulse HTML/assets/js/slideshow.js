@@ -39,7 +39,11 @@
     } catch (error) {
       return -1;
     }
-    return slides.findIndex(function (slide) { return slide.id === id; });
+    var directIndex = slides.findIndex(function (slide) { return slide.id === id; });
+    if (directIndex >= 0) return directIndex;
+    var aliasTarget = document.getElementById(id);
+    var aliasSlide = aliasTarget && aliasTarget.closest(".slide");
+    return aliasSlide ? slides.indexOf(aliasSlide) : -1;
   }
 
   function pauseAllAudio() {

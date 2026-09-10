@@ -1015,7 +1015,7 @@ td:nth-child(5) {
   background: var(--surface-raised);
   color: var(--ink-strong);
   font-size: clamp(1.2rem, 1.8vw, 1.9rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.3;
 }
 

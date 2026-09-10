@@ -758,6 +758,18 @@ audio {
   gap: clamp(1rem, 2vw, 2rem);
 }
 
+.hallucination-visual {
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 32rem);
+}
+
+.hallucination-visual img {
+  height: auto;
+  max-height: 52svh;
+  object-fit: contain;
+}
+
 .risk-columns article {
   padding: clamp(1.1rem, 2.2vw, 2.2rem);
   border-top: 0.25rem solid var(--danger);

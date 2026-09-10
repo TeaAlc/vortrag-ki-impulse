@@ -89,6 +89,13 @@ a:hover {
 img {
   display: block;
   max-width: 100%;
+  border: 2px solid var(--violet);
+  border-radius: 0.5rem;
+}
+
+.media-frame img,
+.image-grid img {
+  border-radius: inherit;
 }
 
 .js .slide img.zoomable-image {

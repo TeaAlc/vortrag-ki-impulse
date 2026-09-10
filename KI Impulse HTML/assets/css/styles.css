@@ -1019,6 +1019,9 @@ td:nth-child(5) {
 }
 
 .discussion-intro {
+  width: 100%;
+  max-width: none;
+  text-wrap: wrap;
   margin: 0 0 clamp(1rem, 2vh, 1.5rem);
   padding: clamp(0.85rem, 1.5vw, 1.25rem);
   border-left: 0.25rem solid var(--violet-bright);

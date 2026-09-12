@@ -1115,6 +1115,11 @@ td:nth-child(5) {
   text-align: center;
 }
 
+.slide--discussion-combined .slide__header .section-mark {
+  max-width: none;
+  width: 100%;
+}
+
 .slide--discussion-combined .slide__header h2 {
   font-size: clamp(3rem, 6vw, 6rem);
 }

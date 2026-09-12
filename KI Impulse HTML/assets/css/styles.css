@@ -699,7 +699,7 @@ audio {
 .tool-layout .media-frame--contain {
   justify-self: center;
   width: min(100%, 87svh);
-  border: 1px solid var(--line);
+  border: 2px solid var(--violet);
   border-radius: 0.5rem;
   background: var(--bg);
 }

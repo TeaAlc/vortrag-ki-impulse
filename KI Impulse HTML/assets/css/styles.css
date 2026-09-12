@@ -695,8 +695,21 @@ audio {
   gap: clamp(1rem, 2vw, 2rem);
 }
 
-.rag-layout .media-frame--contain img {
-  max-height: 49svh;
+.rag-layout .media-frame--contain,
+.tool-layout .media-frame--contain {
+  justify-self: center;
+  width: min(100%, 87svh);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--bg);
+}
+
+.rag-layout .media-frame--contain img,
+.tool-layout .media-frame--contain img {
+  height: auto;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
 }
 
 .dialogue--compact .bubble {
@@ -734,8 +747,8 @@ audio {
   gap: clamp(1rem, 2vw, 2rem);
 }
 
-.tool-layout .media-frame--contain img {
-  max-height: 48svh;
+.tool-layout .media-frame--contain {
+  width: min(100%, 85.3svh);
 }
 
 @media (min-width: 56.25rem) and (orientation: landscape) {

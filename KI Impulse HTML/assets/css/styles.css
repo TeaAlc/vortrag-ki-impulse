@@ -1111,6 +1111,14 @@ td:nth-child(5) {
   font-weight: 700;
 }
 
+.slide--discussion-combined .slide__header {
+  text-align: center;
+}
+
+.slide--discussion-combined .slide__header h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+}
+
 .discussion-intro {
   width: 100%;
   max-width: none;

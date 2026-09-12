@@ -31,11 +31,17 @@
         <h1>KI <span>Impulse</span></h1>
         <p class="lede">Anwendungen, Funktionsweisen, Chancen und Risiken künstlicher Intelligenz.</p>
         <img class="title-avatar" src="assets/images/roboter-avatar-animiert.svg" alt="Ein freundlicher Roboter mit sanft pulsierenden lila Lichtern bricht durch eine kreisförmige Öffnung und greift mit beiden Händen nach dem Rand." width="1254" height="1254" loading="eager" decoding="sync">
-        <div class="audio-block audio-block--intro">
-          <audio controls preload="metadata">
+        <div class="audio-block audio-block--intro audio-playlist" data-playlist="ai-lounge">
+          <p class="audio-playlist__track" aria-live="polite"><strong data-playlist-title>AI Lounge</strong><span data-playlist-position>1 / 3</span></p>
+          <audio controls preload="metadata" aria-label="AI Lounge">
             <source src="assets/audio/ai-lounge.mp3" type="audio/mpeg">
             Ihr Browser kann diese Audiodatei nicht wiedergeben.
           </audio>
+          <div class="audio-playlist__controls" role="group" aria-label="Wiedergabeliste AI Lounge">
+            <button type="button" class="audio-playlist__button" data-playlist-action="previous" aria-label="Vorheriger Titel">← Vorheriger</button>
+            <button type="button" class="audio-playlist__button" data-playlist-action="next" aria-label="Nächster Titel">Nächster →</button>
+            <label class="audio-playlist__repeat"><input type="checkbox" data-playlist-repeat> Wiedergabeliste wiederholen</label>
+          </div>
         </div>
       </div>
     </section>

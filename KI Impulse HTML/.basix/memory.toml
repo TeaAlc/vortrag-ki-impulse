@@ -1,0 +1,19 @@
+version = 1
+
+[[entries]]
+date = "2026-09-12"
+category = "User Instruction"
+insight = "Keep the AI Lounge playlist on the title slide only; the user explicitly rejected audio on the closing slide."
+usefulness = 1
+
+[[entries]]
+date = "2026-09-12"
+category = "User Instruction"
+insight = "Prioritize fast delivery and low token costs, especially Astra and Sol. Keep tests, defensive fixes, and edge-case handling proportional; avoid exhaustive verification for small changes."
+usefulness = 1
+
+[[entries]]
+date = "2026-09-12"
+category = "User Instruction"
+insight = "Accept usable subagent results even when delivered through the wrong channel. Do not request resubmission or clarification solely to correct the communication format."
+usefulness = 1

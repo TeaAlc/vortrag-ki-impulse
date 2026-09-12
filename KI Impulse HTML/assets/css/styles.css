@@ -345,6 +345,70 @@ blockquote {
   border-top: 2px solid var(--violet-bright);
 }
 
+.audio-playlist__track {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0;
+  color: var(--ink-strong);
+}
+
+.audio-playlist__track strong {
+  font-size: 1.05em;
+}
+
+.audio-playlist__track span {
+  color: var(--muted);
+  font-size: 0.9em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.audio-playlist__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.audio-playlist__button {
+  min-height: 2.2rem;
+  padding: 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 0.45rem;
+  background: var(--surface-soft);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.audio-playlist__button:hover:not(:disabled) {
+  background: var(--violet-dark);
+  color: var(--ink-strong);
+}
+
+.audio-playlist__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.audio-playlist__repeat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.audio-playlist__repeat input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--violet-bright);
+}
+
 .audio-block span,
 .audio-block small,
 .note,

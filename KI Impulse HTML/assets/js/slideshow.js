@@ -15,6 +15,11 @@
   var overviewList = document.querySelector("[data-overview-list]");
   var fullscreenButton = document.querySelector("[data-action='fullscreen']");
   var audios = Array.prototype.slice.call(document.querySelectorAll("audio"));
+  var playlistTracks = [
+    { src: "assets/audio/ai-lounge.mp3", title: "AI Lounge" },
+    { src: "assets/audio/AI%20Lounge%202.mp3", title: "AI Lounge 2" },
+    { src: "assets/audio/AI%20Lounge%203.mp3", title: "AI Lounge 3" }
+  ];
   var zoomableImages = Array.prototype.slice.call(document.querySelectorAll(".slide img"));
   var lightbox = document.getElementById("image-lightbox");
   var lightboxImage = document.querySelector("[data-lightbox-image]");
@@ -46,14 +51,108 @@
     return aliasSlide ? slides.indexOf(aliasSlide) : -1;
   }
 
+  function stopAudio(audio, reset) {
+    audio._playbackToken = (audio._playbackToken || 0) + 1;
+    audio.pause();
+    if (reset) {
+      try { audio.currentTime = 0; } catch (error) { /* Metadata may not be ready. */ }
+    }
+  }
+
+  function isAudioOnActiveSlide(audio) {
+    var slide = typeof audio.closest === "function" ? audio.closest(".slide") : null;
+    return !slide || slides.indexOf(slide) === activeIndex;
+  }
+
+  function playAudio(audio) {
+    audios.forEach(function (other) {
+      if (other !== audio) stopAudio(other, true);
+    });
+
+    var token = (audio._playbackToken || 0) + 1;
+    audio._playbackToken = token;
+    var playPromise;
+    try {
+      playPromise = audio.play();
+    } catch (error) {
+      return;
+    }
+    if (playPromise && typeof playPromise.then === "function") {
+      playPromise.then(function () {
+        if (audio._playbackToken !== token) return;
+        if (!isAudioOnActiveSlide(audio)) stopAudio(audio, true);
+      }, function () {
+        if (audio._playbackToken === token) audio._playbackToken += 1;
+      });
+    }
+  }
+
   function pauseAllAudio() {
     audios.forEach(function (audio) {
-      if (!audio.paused) audio.pause();
-      if (audio.currentTime > 0) {
-        try { audio.currentTime = 0; } catch (error) { /* Metadata may not be ready. */ }
-      }
+      stopAudio(audio, true);
     });
   }
+
+  function updatePlaylist(player) {
+    var track = player.tracks[player.index];
+    player.titleOutput.textContent = track.title;
+    player.positionOutput.textContent = (player.index + 1) + " / " + player.tracks.length;
+    player.audio.setAttribute("aria-label", track.title);
+    player.previousButton.disabled = player.index === 0;
+    player.nextButton.disabled = player.index === player.tracks.length - 1;
+  }
+
+  function setPlaylistTrack(player, index, shouldPlay) {
+    if (index < 0 || index >= player.tracks.length) return;
+    var audio = player.audio;
+    var wasPlaying = !audio.paused;
+    stopAudio(audio, true);
+    player.index = index;
+    var track = player.tracks[index];
+    if (player.source) player.source.src = track.src;
+    else audio.src = track.src;
+    if (typeof audio.load === "function") audio.load();
+    updatePlaylist(player);
+    if (shouldPlay === undefined) shouldPlay = wasPlaying;
+    if (shouldPlay) playAudio(audio);
+  }
+
+  function initPlaylistPlayer(root) {
+    var audio = root.querySelector("audio");
+    var titleOutput = root.querySelector("[data-playlist-title]");
+    var positionOutput = root.querySelector("[data-playlist-position]");
+    var previousButton = root.querySelector("[data-playlist-action='previous']");
+    var nextButton = root.querySelector("[data-playlist-action='next']");
+    if (!audio || !titleOutput || !positionOutput || !previousButton || !nextButton) return;
+
+    var player = {
+      audio: audio,
+      source: audio.querySelector("source"),
+      tracks: playlistTracks,
+      index: 0,
+      titleOutput: titleOutput,
+      positionOutput: positionOutput,
+      previousButton: previousButton,
+      nextButton: nextButton,
+      repeatInput: root.querySelector("[data-playlist-repeat]")
+    };
+    root._playlistPlayer = player;
+    updatePlaylist(player);
+    audio.addEventListener("ended", function () {
+      if (!isAudioOnActiveSlide(audio)) {
+        stopAudio(audio, true);
+        return;
+      }
+      var nextIndex = player.index + 1;
+      if (nextIndex >= player.tracks.length) {
+        if (!player.repeatInput || !player.repeatInput.checked) return;
+        nextIndex = 0;
+      }
+      setPlaylistTrack(player, nextIndex, true);
+    });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-playlist]"), initPlaylistPlayer);
 
   function updateControls(index) {
     var previousIndex = Math.max(0, index - 1);
@@ -207,6 +306,19 @@
   });
 
   document.addEventListener("click", function (event) {
+    var playlistActionTarget = event.target.closest("[data-playlist-action]");
+    if (playlistActionTarget) {
+      event.preventDefault();
+      var playlistRoot = playlistActionTarget.closest("[data-playlist]");
+      var player = playlistRoot && playlistRoot._playlistPlayer;
+      if (player) {
+        var action = playlistActionTarget.getAttribute("data-playlist-action");
+        var nextIndex = player.index + (action === "next" ? 1 : -1);
+        if (action === "previous" || action === "next") setPlaylistTrack(player, nextIndex);
+      }
+      return;
+    }
+
     var actionTarget = event.target.closest("[data-action]");
     if (!actionTarget) return;
     var action = actionTarget.getAttribute("data-action");
@@ -272,7 +384,7 @@
   });
 
   document.addEventListener("touchstart", function (event) {
-    if (lightbox.open || event.touches.length !== 1 || event.target.closest("audio, .table-scroll, .details-panel__body")) return;
+    if (lightbox.open || event.touches.length !== 1 || event.target.closest("audio, .audio-playlist, .table-scroll, .details-panel__body")) return;
     touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
   }, { passive: true });
 
@@ -287,11 +399,12 @@
 
   audios.forEach(function (audio) {
     audio.addEventListener("play", function () {
+      if (!isAudioOnActiveSlide(audio)) {
+        stopAudio(audio, true);
+        return;
+      }
       audios.forEach(function (other) {
-        if (other !== audio) {
-          other.pause();
-          try { other.currentTime = 0; } catch (error) { /* Metadata may not be ready. */ }
-        }
+        if (other !== audio) stopAudio(other, true);
       });
     });
   });

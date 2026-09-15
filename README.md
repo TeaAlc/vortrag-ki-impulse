@@ -1,8 +1,14 @@
 # KI Impulse starten
 
-`index.html` doppelt anklicken. Es ist kein Webserver und keine Installation erforderlich.
+## Online öffnen
 
-Die Präsentation umfasst 37 Folien. Die Übersicht folgt der Reihenfolge in `index.html`; die Kapitelmarken bleiben auch beim direkten Scrollen sichtbar.
+Die Präsentation ist direkt über [GitHub Pages](https://teaalc.github.io/vortrag-ki-impulse/) aufrufbar.
+
+## Lokal öffnen
+
+Das Repository herunterladen und `docs/index.html` doppelt anklicken. Es ist kein Webserver und keine Installation erforderlich. Der Ordner `docs/assets/` muss zusammen mit der HTML-Datei erhalten bleiben.
+
+Die Präsentation umfasst 37 Folien. Die Übersicht folgt der Reihenfolge in [docs/index.html](docs/index.html); die Kapitelmarken bleiben auch beim direkten Scrollen sichtbar.
 
 ## Steuerung
 
@@ -18,4 +24,4 @@ Audio startet nur über die Bedienelemente des jeweiligen Players. Auf der Titel
 
 Die vierzehn Diskussionsfragen stehen gemeinsam auf der Folie „Diskussion: Chancen & Risiken“. Die Frage nach Neffe Thomas bleibt offen und ist bewusst nicht aufgelöst.
 
-Alle Pflichtressourcen liegen in `assets/`. Die Dateien in `assets/fonts/` stehen unter der dort mitgelieferten SIL Open Font License.
+Alle Pflichtressourcen liegen in `docs/assets/`. Die Dateien in `docs/assets/fonts/` stehen unter der dort mitgelieferten SIL Open Font License.

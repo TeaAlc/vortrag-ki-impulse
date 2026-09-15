@@ -1,4 +1,10 @@
-# KI Impulse starten
+# KI Impulse
+
+Was kann künstliche Intelligenz heute – und was bedeutet das für unseren Alltag, unsere Arbeit und die Politik? **KI Impulse** ist ein deutschsprachiger Impulsvortrag zum Entdecken, Einordnen und Diskutieren.
+
+Bild- und Hörbeispiele machen KI anschaulich. Verständliche Erklärungen zeigen, wie Chatbots und KI-Agenten funktionieren und wo ihre Grenzen liegen. Chancen, Risiken und gesellschaftliche Fragen laden zum gemeinsamen Weiterdenken ein.
+
+Die Präsentation läuft direkt im Browser: im Vollbild für den Vortrag oder zum Nachlesen auf dem Smartphone. Nach dem Herunterladen funktioniert sie auch offline, ohne Installation.
 
 ## Online öffnen
 
@@ -7,8 +13,6 @@ Die Präsentation ist direkt über [GitHub Pages](https://teaalc.github.io/vortr
 ## Lokal öffnen
 
 Das Repository herunterladen und `docs/index.html` doppelt anklicken. Es ist kein Webserver und keine Installation erforderlich. Der Ordner `docs/assets/` muss zusammen mit der HTML-Datei erhalten bleiben.
-
-Die Präsentation umfasst 37 Folien. Die Übersicht folgt der Reihenfolge in [docs/index.html](docs/index.html); die Kapitelmarken bleiben auch beim direkten Scrollen sichtbar.
 
 ## Steuerung
 
@@ -19,9 +23,4 @@ Die Präsentation umfasst 37 Folien. Die Übersicht folgt der Reihenfolge in [do
 - Präsentationsmodus: Schaltfläche **Vollbild**
 - Mobil: scrollen oder horizontal wischen
 - Bild vergrößern: Bild anklicken; in der Großansicht mit Pfeilen oder Wischen wechseln und mit `Esc` schließen
-
-Audio startet nur über die Bedienelemente des jeweiligen Players. Auf der Titelfolie stehen drei AI-Lounge-Titel als Wiedergabeliste bereit; die Titel wechseln nach dem Ende automatisch. Beim Folienwechsel wird laufendes Audio gestoppt.
-
-Die vierzehn Diskussionsfragen stehen gemeinsam auf der Folie „Diskussion: Chancen & Risiken“. Die Frage nach Neffe Thomas bleibt offen und ist bewusst nicht aufgelöst.
-
-Alle Pflichtressourcen liegen in `docs/assets/`. Die Dateien in `docs/assets/fonts/` stehen unter der dort mitgelieferten SIL Open Font License.
+- Audio: über den jeweiligen Player starten und pausieren; beim Folienwechsel stoppt die Wiedergabe

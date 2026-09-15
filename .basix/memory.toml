@@ -1,6 +1,12 @@
 version = 1
 
 [[entries]]
+date = "2026-09-15"
+category = "Verification"
+insight = "When playlist asset paths change, update the slideshow script URL version in docs/index.html; cached JavaScript can otherwise request deleted audio files after deployment."
+usefulness = 0
+
+[[entries]]
 date = "2026-09-10"
 category = "Tooling"
 insight = "Before browser checks, locate an available Playwright installation and browser binaries; temporary installations may no longer exist. Wait for hash navigation before screenshots."

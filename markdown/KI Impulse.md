@@ -6,15 +6,15 @@ Anwendungen, Funktionsweisen, Chancen und Risiken künstlicher Intelligenz.
 
 **AI Lounge**
 
-![[assets/audio/ai-lounge.mp3]]
+![[assets/audio/ai-lounge.webm]]
 
 **AI Lounge 2**
 
-![[assets/audio/AI Lounge 2.mp3]]
+![[assets/audio/AI Lounge 2.webm]]
 
 **AI Lounge 3**
 
-![[assets/audio/AI Lounge 3.mp3]]
+![[assets/audio/AI Lounge 3.webm]]
 
 ---
 
@@ -110,7 +110,7 @@ Es kann – gute Hardware vorausgesetzt – lokal betrieben werden; auch die Sti
 
 Mit wenig Text kann KI mittlerweile ganze Songs erstellen. Natürlich macht dies auch die fiktive GPD als erste Partei mit eigenem Musikalbum – zum Beispiel mit [Suno.ai](https://suno.com).
 
-![[assets/audio/silber-schwarz.mp3]]
+![[assets/audio/silber-schwarz.webm]]
 
 > [!example]- Prompt: Silber-Schwarz
 > **[Intro]**\

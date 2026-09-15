@@ -10,12 +10,18 @@ usefulness = 0
 date = "2026-09-09"
 category = "Repository"
 insight = "README is `README.md`; Obsidian source is `markdown/KI Impulse.md`; presentation is `docs/index.html`. Media live in `markdown/assets/` and `docs/assets/`; Markdown uses static WebP images and local audio embeds."
-usefulness = 3
+usefulness = 4
 
 [[entries]]
 date = "2026-09-15"
 category = "Repository"
 insight = "For presentation work, also read `docs/.basix/memory.toml`; it contains additional user instructions about audio placement and workflow."
+usefulness = 1
+
+[[entries]]
+date = "2026-09-15"
+category = "User Instruction"
+insight = "Prioritize Android playback; Apple devices are practically irrelevant to this project's audience. Music uses Opus/WebM at 96 kbit/s VBR, 48 kHz stereo in both presentation and Markdown assets."
 usefulness = 0
 
 [[entries]]

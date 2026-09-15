@@ -16,9 +16,9 @@
   var fullscreenButton = document.querySelector("[data-action='fullscreen']");
   var audios = Array.prototype.slice.call(document.querySelectorAll("audio"));
   var playlistTracks = [
-    { src: "assets/audio/ai-lounge.mp3", title: "AI Lounge" },
-    { src: "assets/audio/AI%20Lounge%202.mp3", title: "AI Lounge 2" },
-    { src: "assets/audio/AI%20Lounge%203.mp3", title: "AI Lounge 3" }
+    { src: "assets/audio/ai-lounge.webm", title: "AI Lounge" },
+    { src: "assets/audio/AI%20Lounge%202.webm", title: "AI Lounge 2" },
+    { src: "assets/audio/AI%20Lounge%203.webm", title: "AI Lounge 3" }
   ];
   var zoomableImages = Array.prototype.slice.call(document.querySelectorAll(".slide img"));
   var lightbox = document.getElementById("image-lightbox");

@@ -24,3 +24,8 @@ Das Repository herunterladen und `docs/index.html` doppelt anklicken. Es ist kei
 - Mobil: scrollen oder horizontal wischen
 - Bild vergrößern: Bild anklicken; in der Großansicht mit Pfeilen oder Wischen wechseln und mit `Esc` schließen
 - Audio: über den jeweiligen Player starten und pausieren; beim Folienwechsel stoppt die Wiedergabe
+
+## Lizenz
+
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
+Für die eingebundenen Schriftarten gelten die jeweiligen Lizenztexte unter [docs/assets/fonts/](docs/assets/fonts/).

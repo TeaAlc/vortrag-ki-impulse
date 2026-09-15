@@ -3,14 +3,20 @@ version = 1
 [[entries]]
 date = "2026-09-10"
 category = "Tooling"
-insight = "For presentation browser checks, reuse Playwright in /tmp/ki-impulse-run/node_modules and browsers in /tmp/ki-impulse-playwright. Browser launch requires sandbox escalation; wait for hash navigation before screenshots."
+insight = "Before browser checks, locate an available Playwright installation and browser binaries; temporary installations may no longer exist. Wait for hash navigation before screenshots."
 usefulness = 0
 
 [[entries]]
 date = "2026-09-09"
 category = "Repository"
-insight = "The Obsidian note is `markdown/KI Impulse.md`; the browser presentation is `docs/index.html`. Markdown media live in `markdown/assets/`, with static WebP images and local audio embeds."
-usefulness = 2
+insight = "README is `README.md`; Obsidian source is `markdown/KI Impulse.md`; presentation is `docs/index.html`. Media live in `markdown/assets/` and `docs/assets/`; Markdown uses static WebP images and local audio embeds."
+usefulness = 3
+
+[[entries]]
+date = "2026-09-15"
+category = "Repository"
+insight = "For presentation work, also read `docs/.basix/memory.toml`; it contains additional user instructions about audio placement and workflow."
+usefulness = 0
 
 [[entries]]
 date = "2026-09-09"

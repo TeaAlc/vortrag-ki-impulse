@@ -25,18 +25,18 @@ allow_local_binding = true
 # basix:local-access-profile:end
 # basix:agent-config:start
 [agents.basix_file_explorer]
-config_file = "/home/codex/develop/vortraege/.codex/basix/agents/basix-file-explorer.toml"
+config_file = "/home/codex/develop/vortraege/vortrag-ki-impulse/.codex/basix/agents/basix-file-explorer.toml"
 
 [agents.basix_miraculix]
-config_file = "/home/codex/develop/vortraege/.codex/basix/agents/basix-miraculix.toml"
+config_file = "/home/codex/develop/vortraege/vortrag-ki-impulse/.codex/basix/agents/basix-miraculix.toml"
 
 [agents.basix_pager]
-config_file = "/home/codex/develop/vortraege/.codex/basix/agents/basix-pager.toml"
+config_file = "/home/codex/develop/vortraege/vortrag-ki-impulse/.codex/basix/agents/basix-pager.toml"
 
 [agents.basix_researcher]
-config_file = "/home/codex/develop/vortraege/.codex/basix/agents/basix-researcher.toml"
+config_file = "/home/codex/develop/vortraege/vortrag-ki-impulse/.codex/basix/agents/basix-researcher.toml"
 
 [agents.basix_verifier]
-config_file = "/home/codex/develop/vortraege/.codex/basix/agents/basix-verifier.toml"
+config_file = "/home/codex/develop/vortraege/vortrag-ki-impulse/.codex/basix/agents/basix-verifier.toml"
 
 # basix:agent-config:end

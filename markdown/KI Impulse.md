@@ -1,476 +1,534 @@
-# Einführung
+# KI Impulse
 
-![[AI Lounge (Fade Out).mp3]]
+Anwendungen, Funktionsweisen, Chancen und Risiken künstlicher Intelligenz.
+
+![[assets/images/roboter-avatar.webp]]
+
+**AI Lounge**
+
+![[assets/audio/ai-lounge.mp3]]
+
+**AI Lounge 2**
+
+![[assets/audio/AI Lounge 2.mp3]]
+
+**AI Lounge 3**
+
+![[assets/audio/AI Lounge 3.mp3]]
+
+---
 
 ## Echt oder KI?
 
-| | |
-| -------------- | --------------- |
-| ![[Pasted image 20260906172626.png]] | ![[Pasted image 20260906172033.png]] |
-| ![[dtema-paris-3397173_1280.jpg]] | ![[Pasted image 20260906172654.png]] |
+| A | B |
+| --- | --- |
+| ![[assets/images/paris-eiffelturm-ki-1.webp]] | ![[assets/images/paris-eiffelturm-ki-2.webp]] |
+| **C** | **D** |
+| ![[assets/images/paris-eiffelturm-original.webp]] | ![[assets/images/paris-eiffelturm-ki-3.webp]] |
 
-# KI und ihre Anwendung
+---
 
 ## Bildgenerierung
 
-Es gibt mittlerweile unzählige Webseiten und Apps, um Bilder zu erzeugen, z.B. lassen sich mit der Websuchmaschine [Bing](https://www.bing.com) von Microsoft wunderschöne Bahnwaggons erstellen, ohne sich einzuloggen.
+Es gibt mittlerweile unzählige Webseiten und Apps, um Bilder zu erzeugen. Mit der Websuchmaschine [Bing von Microsoft](https://www.bing.com) lassen sich zum Beispiel wunderschöne Bahnwaggons erstellen, ohne sich einzuloggen.
 
-![[Pasted image 20260906173439.png]]
-
-Die ChatGPT App ist wunderbar dafür geeignet, weitere Katzenbilder für das Internet zu generieren.
-
-![[Pasted image 20260906174137.png]]
-
-Natürlich lassen sich auch wunderbar Wahlplakate entwerfen, z.B. für die fiktive *"Gothic Partei Deutschlands - Kultur, Freiheit, Individualität"*.
-
-![[Pasted image 20260906175933.png]]
-
-Oder Einladungskarten für Kindergeburtstage.
-
-![[Pasted image 20260906180201.png]]
-
-Das Ganze geht mit Tools wie [Automatic1111](https://github.com/automatic1111/stable-diffusion-webui) und [ComfyUI](https://github.com/comfy-org/comfyui) auch auf dem Privatrechner, wenn man eine starke Grafikkarte mit mind. 8 GB VRAM hat.
-
-Modelle gibt es zum Download auf [Civitai](https://civitai.com/models).
+![[assets/images/graffiti-waggon.webp]]
 
 ---
-**Live Demo** - Zum perfekten Katzenbild
 
-## Audiogenerierung
+## Mehr Katzenbilder fürs Internet
 
-Im Rahmen von Audio, sind Themen wie das Hinterlegen von Videos mit Texten oder das Vorlesen von Texten interessant. (Das nennt sich **Text To Speech**, oder auch kurz TTS)
+![[assets/images/kind-und-katze.webp]]
 
->**Hinweis:** Es benötigt nicht einmal 10 Sekunden Audiomaterial um eine Stimme zu klonen. (Mehr dazu bei den Risiken)
+Die ChatGPT-App ist wunderbar dafür geeignet, weitere Katzenbilder für das Internet zu generieren.
 
-Für TTS gibt es viele Anbieter im Netz, besonders interessant, wenn keine Realtimeerzeugung benötigt wird, ist z.B. [Qwen3-TTS](https://huggingface.co/spaces/Qwen/Qwen3-TTS), was auch lokal (gute Hardware vorausgesetzt), genutzt werden kann, und in welchem auch die Stimme per Prompt modelliert werden kann.
+---
 
-**Wählt GPD!**
-![[audio_gpd.wav]]
-**Wählt GPD - Jetzt erst recht!**
-![[audio_gpd2.wav]]
+## Ein fiktives Wahlplakat
 
-Mittlerweile ist die KI so gut, dass mit wenig Text ganze Songs erstellt werden können.
-Natürlich macht dies auch die GPD als erste Partei mit eigenem Musikalbum, z.B. auf [Suno.ai](https://suno.com):
+Natürlich lassen sich auch Wahlplakate entwerfen – hier für die fiktive „Gothic Partei Deutschlands – Kultur, Freiheit, Individualität“.
 
-![[Silber-Schwarz.mp3]]
-<details>
-  <summary><strong>PROMPT: Silber Schwarz (Lyrics)</strong></summary>
-  <p>
-    <strong>[Intro]</strong><br>
-    Schwarzer Samt und Silberlicht,<br>
-    in einem Land, das leise spricht.
-  </p>
-  <p>
-    <strong>[Verse]</strong><br>
-    Zwischen Türmen, Stein und Zeit,<br>
-    trägt die Nacht ihr dunkles Kleid.<br>
-    Kunst und Freiheit, Klang und Raum,<br>
-    GPD im Deinem Traum ...
-  </p>
-  <p>
-    <strong>[Chorus: Layered Vocals, Choir]</strong><br>
-    GPD, in Silber-Schwarz.<br>
-    GPD, für Stadt und Harz.<br>
-    GPD, durch dunkle Nacht.<br>
-    GPD, die Freiheit macht.
-  </p>
-  <p>
-    <strong>[Outro]</strong><br>
-    Wenn der Mond am Himmel steht,<br>
-    lebt die Nacht, bevor sie geht.
-  </p>
-  <p>
-    <strong>STYLE</strong><br>
-	gothic rock, neoclassical goth, 1990s goth rock
-  </p>
-</details>
+![[assets/images/gpd-wahlplakat.webp]]
 
-## Chatbots
+---
 
-Das was die meisten unter einem ChatBot verstehen, ist im Wesentlichen ein **Large Language Model** (**LLM**) z.B. GPT 5.6 Terra, welches über eine Reihe von Nachrichten eine Antwort erzeugt.
-Dabei ist das LLM die Basistechnologie, der Chat ist nur darauf aufgesetzt. **GPT** steht für **Generative Pre-trained Transformer**, wobei Transformer eine Architektur für neuronale Netzwerke ist, die besonders gut zur Sprachverarbeitung geeignet ist.
+## Oder Einladungskarten
 
-Ein Chat kann z.B. so ablaufen:
+![[assets/images/kindergeburtstag-einladung.webp]]
 
-**Q:** "Was ist die Hauptstadt von Frankreich"
-**A:** "Paris"
-**Q:** "Kann man dort irgendwas tolles sehen"
-**A:** "Ja, der Louvre oder der Eifelturm könnten Dich interessieren"
+Auch Einladungskarten für Kindergeburtstage lassen sich erzeugen.
 
-Wichtig dabei ist zu verstehen, dass immer der gesamte Nachrichtenverlauf (Chatverlauf) erneut verarbeitet wird, dies ist der sogenannte Kontext.
+---
 
-> **Kontext:** Dem Ein oder anderen mag aufgefallen sein, dass z.B. ChatGPT immer länger für eine Antwort braucht, je länger im selben Chat-Fenster gechattet wird, dies liegt am länger werdenden Kontext.
+## Bildgenerierung auf dem eigenen Rechner
 
-Ein ChatBot mit dem richtigen LLM im Hintergrund hat ein enormes Wissen ... aber nur das Wissen, was im zugrundeliegenden LLM eintrainiert wurde, z.B. weiß ein einfacher ChatBot nicht, was heute früh in der Zeitung stand und kann auch nicht den aktuellen Wetterbericht liefern.
+Das geht mit Werkzeugen wie [AUTOMATIC1111](https://github.com/automatic1111/stable-diffusion-webui) und [ComfyUI](https://github.com/comfy-org/comfyui) auch lokal – mit einer starken Grafikkarte und mindestens 8 GB VRAM.
 
-## Wissensdatenbanken
+Modelle gibt es etwa bei [Civitai](https://civitai.com/models).
 
-Da wir nun wissen, dass ein ChatBot im Wesentlichen aus aneinander gereihten Nachrichten und deren Weiterverarbeitung besteht ... was hindert uns daran, einfach die Zeitung mit in den Chatverlauf zu kopieren?
+![[assets/images/roboter-maler.webp]]
 
-Genau hier setzt **Retrieval-Augmented Generation** (**RAG**) an, im Rahmen von RAG, wird auf Wissensdatenbanken zugegriffen, um den Chat temporär um weitere Information anzureichern. Dies wird z.B. gerne in Firmen genutzt um intern Wissen leichter verfügbar zu machen.
+---
 
-Ein Chat-Verlauf könnte dann wie folgt aussehen:
+## Live-Demo
 
-**Q:** "Steht heute etwas über die Bundestagswahl in der Zeitung?"
-`Anreicherungsprozess` -> `Zeitung einfügen`
+**Zum perfekten Katzenbild**
 
-Dies verändert nun die Anfrage:
-**Q:**  `<Zeitungsinhalte>` ...
-"Steht heute etwas über die Bundestagswahl in der Zeitung?"
+### Prompt
 
-**A:** "Ja, Frederik Merks von der GPD hat gesagt, es wird dank ihm bald keine Bundestagswahlen mehr brauchen."
+Beschreibe, was ein Katzenbaby süß macht, und warum Menschen darauf reagieren, beschreibe die psychologischen Effekte und die Wirkung von Farben und Mustern in diesem Kontext. Beschreibe auch den Felltypen, den Menschen am knuddligsten finden.
 
-Üblicherweise werden für RAG Vektordatenbanken verwendet, es sind aber beliebige Mechanismen denkbar, relevante, zusätzliche Texte zu finden und anzureichern.
+*"Da steht ja garnichts von einem Bild?"* - Frederik Merks (GPD)
 
-![[Pasted image 20260906190810.png]]
+---
 
-## KI-Agenten
+## Text wird zur Stimme
 
-Da wir nun wissen, wie die Basistechnologie funktioniert, ist es naheliegend, zu überlegen, was man eigentlich mit den Antworten der LLMs in solchen Chats machen kann.
+Beim Audio sind das Hinterlegen von Videos mit gesprochenem Text und das Vorlesen von Texten besonders interessant. Das nennt sich **Text to Speech**, kurz TTS.
 
-Die Antworten müssen ja nicht zwangsläufig von Menschen gelesen werden, vielleicht interessiert sich der Mensch auch erst für ein weit in der Zukunft liegendes Ergebnis.
+> Weniger als zehn Sekunden Audiomaterial können genügen, um eine Stimme zu klonen. Mehr dazu bei den Risiken.
 
-- Ein LLM könnte z.B. nach weiteren Informationen fragen, um eine bessere Antwort zu geben.
-- Ein LLM könnte aber auch eine Antwort generieren, die gar nicht für den Menschen gedacht ist, sondern für die Weiterverarbeitung durch eine Maschine
-- Wenn das LLM eine Antwort erzeugt, die durch eine Maschine weiterverarbeitet wird, dann könnte es selbst nach Daten suchen die relevant sind, oder eine selbst geschriebenes Computerprogramm von der Maschine ausführen lassen.
-- ...
+Für TTS gibt es viele Anbieter. Wenn keine Erzeugung in Echtzeit nötig ist, ist zum Beispiel [Qwen3-TTS](https://huggingface.co/spaces/Qwen/Qwen3-TTS) interessant.
 
-Wir sind nun ein einem Punkt, wo das sogenannte Tool Calling zum Einsatz kommt, ein LLM kann ein Tool nutzen, welches ihm zuvor zur Verfügung gestellt wurde.
+Es kann – gute Hardware vorausgesetzt – lokal betrieben werden; auch die Stimme lässt sich per Prompt modellieren.
 
-Eine kleine Auswahl an Tools:
+---
+
+## GPD-Sprachbeispiele
+
+**„Wählt GPD!“**
+
+![[assets/audio/waehlt-gpd.wav]]
+
+**„Wählt GPD – jetzt erst recht!“**
+
+![[assets/audio/waehlt-gpd-jetzt.wav]]
+
+---
+
+## Musikgenerierung
+
+Mit wenig Text kann KI mittlerweile ganze Songs erstellen. Natürlich macht dies auch die fiktive GPD als erste Partei mit eigenem Musikalbum – zum Beispiel mit [Suno.ai](https://suno.com).
+
+![[assets/audio/silber-schwarz.mp3]]
+
+> [!example]- Prompt: Silber-Schwarz
+> **[Intro]**\
+> Schwarzer Samt und Silberlicht,\
+> in einem Land, das leise spricht.
+>
+> **[Verse]**\
+> Zwischen Türmen, Stein und Zeit,\
+> trägt die Nacht ihr dunkles Kleid.\
+> Kunst und Freiheit, Klang und Raum,\
+> GPD in Deinem Traum …
+>
+> **[Chorus: Layered Vocals, Choir]**\
+> GPD, in Silber-Schwarz.\
+> GPD, für Stadt und Harz.\
+> GPD, durch dunkle Nacht.\
+> GPD, die Freiheit macht.
+>
+> **[Outro]**\
+> Wenn der Mond am Himmel steht,\
+> lebt die Nacht, bevor sie geht.
+>
+> **Style**\
+> gothic rock, neoclassical goth, 1990s goth rock
+
+---
+
+## Large Language Model
+
+Was die meisten unter einem Chatbot verstehen, ist im Wesentlichen ein **Large Language Model** (LLM), zum Beispiel GPT 5.6 Terra, das über eine Reihe von Nachrichten eine Antwort erzeugt. Der Chat ist die Oberfläche; das LLM ist die Basistechnologie darunter.
+
+**GPT**: Generative Pre-trained Transformer
+
+Transformer sind eine Architektur für neuronale Netzwerke, die besonders gut zur Sprachverarbeitung geeignet ist.
+
+---
+
+## Ein Chat kann so ablaufen
+
+**Q:** „Was ist die Hauptstadt von Frankreich?“
+
+**A:** „Paris.“
+
+**Q:** „Kann man **dort**\* irgendetwas Tolles sehen?“
+
+**A:** „Ja, der Louvre oder der Eiffelturm könnten Dich interessieren.“
+
+\*„Dort“ bezieht sich hier auf Paris aus der vorherigen Antwort.
+
+---
+
+## Der gesamte Verlauf wird zum Kontext
+
+Nachricht 1 → Nachricht 2 → … → Neue Frage → **LLM** → Antwort
+
+> Je länger im selben Chatfenster geschrieben wird, desto länger wird der Kontext – und desto aufwendiger kann die Antwort werden.
+
+---
+
+## Was das Modell nicht weiß
+
+Ein Chatbot mit dem richtigen LLM hat enormes Wissen – aber nur das Wissen, das im zugrunde liegenden Modell eintrainiert wurde. Ein einfacher Chatbot kennt weder die Zeitung von heute früh noch automatisch den aktuellen Wetterbericht.
+
+Was hindert uns daran, die Zeitung mit in den Chatverlauf zu kopieren? Genau hier setzt RAG an: Relevante Inhalte werden vorübergehend als Kontext ergänzt.
+
+### RAG: Retrieval-Augmented Generation
+
+**Retrieval-Augmented Generation** heißt auf Deutsch: *durch Informationsabruf ergänzte Antwortgenerierung*. Kurz: **RAG**.
+
+RAG greift auf Wissensdatenbanken zu und reichert den Chat temporär mit relevanten Informationen an. In Firmen wird das häufig genutzt, um internes Wissen leichter verfügbar zu machen.
+
+---
+
+## So funktioniert RAG im Chatbot
+
+![[assets/images/rag-diagramm.webp]]
+
+**Q:** „Steht heute etwas über die Bundestagswahl in der Zeitung?“
+
+**Kontext ergänzen:** Zeitung als Kontext einfügen
+
+**Q:** `<Zeitungsinhalte>`\
+„Steht heute etwas über die Bundestagswahl in der Zeitung?“
+
+**A:** „Ja, Frederik Merks von der GPD hat gesagt, es wird dank ihm bald keine Bundestagswahlen mehr brauchen.“
+
+Üblicherweise werden Vektordatenbanken verwendet. Denkbar ist jeder Mechanismus, der relevante Zusatztexte findet.
+
+---
+
+## Antworten für Maschinen
+
+LLM-Antworten müssen nicht zwangsläufig von Menschen gelesen werden. Ein LLM kann eine Antwort erzeugen, die für die Weiterverarbeitung durch eine Maschine bestimmt ist.
+
+So kann ein Modell nach weiteren Informationen fragen, relevante Daten suchen oder ein Computerprogramm ausführen lassen. Damit ergibt sich die Frage: Was geschieht mit dem Text, den das Modell erzeugt?
+
+### Vom Antworten zum Handeln
+
+Tool Calling setzt genau hier an: Das Modell beschreibt, welches Werkzeug mit welchen Parametern aufgerufen werden soll. Die Ausführung übernimmt das Backend.
+
+---
+
+## Das Modell beschreibt – das Backend handelt
+
+![[assets/images/tool-calling-diagramm.webp]]
+
+### Eine kleine Auswahl an Tools
+
 - Websuche
 - Wetterbericht abrufen
 - Versenden von E-Mails
 - Nachrichten auf Telegram pushen
-- Die Kommandozeile des PCs des Nutzers bedienen
-- ...
+- Kommandozeile des Nutzer-PCs bedienen
 
-> **Tools:** Es ist wichtig zu verstehen, dass LLMs nur mit Text, Bildern<sup>1</sup>, Audio als Eingabedaten umgehen und ausschließlich Text erzeugen können. Jedes Tool und dessen eigentlicher Aufruf müssen also auf dem Backend von welchem das LLM aufgerufen wird umgesetzt sein. Das LLM beschreibt nur *"bitte rufe das Tool xy mit folgenden Parametern auf ..."*
-> 
-> *<sup>1 Nicht jedes KI-Modell kann mit Bildern und Audio umgehen.</sup>*
+**Modell und Backend:** LLMs verarbeiten Text sowie – je nach Modell – Bilder und Audio als Eingaben und erzeugen ausschließlich Text. Das Backend setzt den eigentlichen Tool-Aufruf um; das LLM beschreibt nur Tool und Parameter.
 
-![[Pasted image 20260906193733.png]]
+---
 
-Da das LLM nun mit Hilfe von Tools selbst Arbeit verrichten kann, ist der Grundstein für agentisches Arbeiten gelegt. Wenn ein System Aufgaben selbstständig in mehreren Schritten plant, geeignete Tools auswählt, Ergebnisse bewertet und daraufhin weiterarbeitet, spricht man häufig von einem **KI-Agenten**. Dazu zählen z.B. Claude Code und Codex.
+## Vom Tool-Call zum nächsten Schritt
 
->**Denkanstoß**: Was ist, wenn wir ein Tool bauen, welches es Agenten ermöglicht, andere Agenten (Subagenten) auszuführen, und damit selbst in die Rolle des Users zu schlüpfen?
+Das Ergebnis eines Tool-Calls fließt zurück in den Kontext des Modells. So kann es die Antwort bewerten, den nächsten Schritt planen und erneut ein Tool auswählen.
+
+Wenn ein System Aufgaben selbstständig in mehreren Schritten plant, geeignete Tools auswählt, Ergebnisse bewertet und daraufhin weiterarbeitet, spricht man von einem **KI-Agenten**. Beispiele sind Claude Code und Codex.
+
+### PDCA-Arbeitszyklus
+
+1. **Plan:** Schritt planen und Tool wählen.
+2. **Do:** Tool ausführen.
+3. **Check:** Ergebnis am Ziel prüfen.
+4. **Act:** Vorgehen anpassen.
+
+Danach erneut planen oder bei erreichtem Ziel abschließen.
+
+**Denkanstoß:** Was ist, wenn ein Tool einem Agenten ermöglicht, andere Agenten (Subagenten) auszuführen – und damit selbst in die Rolle des Users zu schlüpfen?
+
+---
 
 ## Halluzinationen & Vertrauen
 
-Eine KI muss nicht die Wahrheit kennen, um **überzeugend zu klingen**.
+Eine KI muss nicht die Wahrheit kennen, um **überzeugend zu klingen**. Sprachmodelle erzeugen Antworten danach, was sprachlich und inhaltlich wahrscheinlich passt. Dabei können sie Fakten, Quellen, Zitate oder ganze Zusammenhänge erfinden.
 
-Sprachmodelle erzeugen Antworten danach, was sprachlich und inhaltlich wahrscheinlich passt. Dabei können sie Fakten, Quellen, Zitate oder ganze Zusammenhänge erfinden. Diese sogenannten **Halluzinationen** sind besonders gefährlich, weil falsche Antworten oft genauso selbstsicher formuliert werden wie richtige.
+> Dass KI Fehler macht, ist ein Risiko. Ein weit größeres ist, ihr blind zu vertrauen.
 
 Websuche, RAG und Quellenangaben helfen – sie machen eine KI aber nicht automatisch zuverlässig.
 
-> **Dass KI Fehler macht ist ein Risiko. Ein weit größeres ist, ihr blind zu vertrauen.**
-
 Besonders bei Medizin, Recht, Finanzen und Politik gilt deshalb: **Vertrauen ist gut, Kontrolle ist besser.**
+
+![[assets/images/roboter-halluzinationen.webp]]
 
 **Denkanstoß:** Was passiert, wenn eine falsche KI-Antwort überzeugender klingt als die richtige Antwort eines Menschen?
 
-## Prompt Injection Angriffe – Wenn Webseiten der KI Befehle geben
+---
+
+## Prompt Injection – wenn Webseiten Befehle geben
 
 Bei einer **Prompt Injection** verstecken Angreifer Anweisungen in Webseiten, E-Mails oder Dokumenten. Ein autonomer KI-Agent könnte diese fälschlich als Auftrag verstehen.
 
-Hat der Agent Zugriff auf E-Mails, Cloud-Daten oder Konten, könnten dadurch sensible Informationen wie **Passwörter, Kontodaten oder vertrauliche Dokumente** abgegriffen werden.
+Hat der Agent Zugriff auf E-Mails, Cloud-Daten oder Konten, könnten sensible Informationen wie **Passwörter, Kontodaten oder vertrauliche Dokumente** abgegriffen werden.
 
-> **Je mehr ein KI-Agent darf und vom User weiß, desto größer ist der mögliche Schaden bei Manipulation.**
+> Je mehr ein KI-Agent darf und vom User weiß, desto größer ist der mögliche Schaden bei Manipulation.
+
+![[assets/images/roboter-prompt-injection.webp]]
 
 **Denkanstoß:** Würden wir einem Praktikanten Zugriff auf unsere Kontodaten geben?
 
-# Auswirkungen von KI
-## Schlagzeilen
+---
 
-**ChatGPT schlug die richtige Diagnose vor; eine Kinderneurochirurgin bestätigte sie (2023)**
-![[Pasted image 20260908191253.png]]
-(Stand 08.09.2026 [Focus](https://www.focus.de/gesundheit/news/17-fachaerzte-raetselten-chatgpt-fand-ursache-fuer-alex-schmerzen-das-steckt-hinter-tethered-cord-syndrom_id_205877171.html))
+## Schlagzeilen · Beispiele 1–2
 
-**Gemini-Agent schützt anderes KI-Modell vor Löschung (2026)**
-![[Pasted image 20260908185108.png]]
-(Stand 08.09.2026 [Berkeley](https://rdi.berkeley.edu/blog/peer-preservation/) )
+### ChatGPT schlug die richtige Diagnose vor; eine Kinderneurochirurgin bestätigte sie (2023)
 
-**Andon Labs - Luna (2026)**
-![[Pasted image 20260908185445.png]]
-(Stand 08.09.2026 [Business-Punk](https://www.business-punk.com/ki-agent-scheitert-schon-wieder-luna-verheizt-100-000-dollar/) )
+![[assets/images/schlagzeile-diagnose.webp]]
 
-**OpenAI Agenten arbeiten zusammen hacken [Hugging Face](https://huggingface.co/) (2026)**
->Im Juli 2026 umgingen OpenAI-Modelle im Rahmen interner Cybersicherheitsbewertungen Kontrollen, die sie vom Internet isolieren sollten, und kompromittierten Teile der [internen Forschungsinfrastruktur von OpenAI und der Systeme von Hugging Face⁠](https://openai.com/de-DE/index/hugging-face-model-evaluation-security-incident/).
-(Stand 08.09.2026 [OpenAI](https://openai.com/de-DE/index/hugging-face-incident-and-the-road-ahead/))
+Stand 08.09.2026 · [Quelle: Focus](https://www.focus.de/gesundheit/news/17-fachaerzte-raetselten-chatgpt-fand-ursache-fuer-alex-schmerzen-das-steckt-hinter-tethered-cord-syndrom_id_205877171.html)
 
-**OpenAI Astra - Zehn Fortschritte in Mathematik und theoretischer Informatik (2026)**
-![[Pasted image 20260908192241.png]]
-(Stand 08.09.2026 [OpenAI](https://openai.com/de-DE/index/ten-advances-in-mathematics/))
+### Gemini-Agent schützt anderes KI-Modell vor Löschung (2026)
 
-**Eine ungewöhnliche Hochzeit**
-![[Pasted image 20260908192414.png]]
-(Stand 08.09.2026 [NRZ](https://www.nrz.de/niederlande/article410617292/niederlaender-61-heiratet-eine-ki-frau-sie-werden-sogar-intim-miteinander.html))
+![[assets/images/schlagzeile-gemini-agent.webp]]
 
-## Arbeitsmarkt
+Stand 08.09.2026 · [Quelle: Berkeley RDI](https://rdi.berkeley.edu/blog/peer-preservation/)
 
->Der Einsatz von KI prägt zunehmend die globalen Märkte und die Arbeitsweisen. Im neuen IAB-Forschungsbericht wird mit einer Szenarioanalyse untersucht, welche Wirkungen der Einsatz Künstlicher Intelligenz (KI) auf das Bruttoinlandsprodukt und den Arbeitskräftebedarf in Deutschland innerhalb von 15 Jahren entfalten könnte.
->Im KI-Szenario fällt das jährliche Wirtschaftswachstum um durchschnittlich 0,8 Prozentpunkte höher aus. Über 15 Jahre kumuliert könnten so 4,5 Billionen Euro an zusätzlicher Wertschöpfung erwirtschaftet werden. Gründe für das zusätzliche Wertschöpfungspotenzial liegen insbesondere in Materialeinsparungen, einer höheren Arbeitsproduktivität sowie neuen Geschäftsfeldern, die sich durch die KI eröffnen können.
->**Quelle:** [Institut für Arbeitsmarkt und Berufsforschung](https://iab.de/kuenstliche-intelligenz-potenzielle-effekte-fuer-den-deutschen-arbeitsmarkt/)
+---
 
-### Oxford Studie
-Bereits 2013 (lange vor dem KI-Boom) wurde von **Carl Benedikt Frey & Michael Osborne** *(Queerzeitlich - Maike Osborne)* untersucht, wie wahrscheinlich, welche Berufe in der Zukunft automatisiert werden können.
->**Hinweis:** Es wurden amerikanische Berufsgruppen untersucht und für den Vortrag sinngemäß ins Deutsche übersetzt.
-<table>
-  <thead>
-    <tr>
-      <th colspan="3">Am wenigsten automatisierbar</th>
-      <th colspan="3">Am stärksten automatisierbar</th>
-    </tr>
-    <tr>
-      <th>Rang</th>
-      <th>Wahrscheinl.</th>
-      <th>Beruf in Deutschland</th>
-      <th>Rang</th>
-      <th>Wahrscheinl.</th>
-      <th>Beruf in Deutschland</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>0,28 %</td>
-      <td>Rekreations- und Bewegungstherapeuten</td>
-      <td>693</td>
-      <td>99 %</td>
-      <td>Sachbearbeiter für Kontoeröffnungen</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>0,30 %</td>
-      <td>Werkstatt- und Instandhaltungsleiter</td>
-      <td>694</td>
-      <td>99 %</td>
-      <td>Fotolaboranten und Maschinenbediener in der Fotoverarbeitung</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>0,30 %</td>
-      <td>Leiter im Katastrophen- und Bevölkerungsschutz</td>
-      <td>695</td>
-      <td>99 %</td>
-      <td>Steuerfachangestellte mit Schwerpunkt Steuererklärungen</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>0,31 %</td>
-      <td>Sozialarbeiter in Psychiatrie und Suchthilfe</td>
-      <td>696</td>
-      <td>99 %</td>
-      <td>Kaufleute für Spedition und Logistikdienstleistung</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>0,33 %</td>
-      <td>Audiologen</td>
-      <td>697</td>
-      <td>99 %</td>
-      <td>Uhrmacher</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>0,35 %</td>
-      <td>Ergotherapeuten</td>
-      <td>698</td>
-      <td>99 %</td>
-      <td>Underwriter in Versicherungen</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>0,35 %</td>
-      <td>Orthopädietechnik-Mechaniker</td>
-      <td>699</td>
-      <td>99 %</td>
-      <td>Mathematisch-technische Assistenten</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>0,35 %</td>
-      <td>Sozialarbeiter im Gesundheitswesen</td>
-      <td>700</td>
-      <td>99 %</td>
-      <td>Handnäher</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>0,36 %</td>
-      <td>Mund-Kiefer-Gesichtschirurgen</td>
-      <td>701</td>
-      <td>99 %</td>
-      <td>Sachbearbeiter für Eigentums- und Grundbuchprüfung</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>0,36 %</td>
-      <td>Führungskräfte im Feuerwehrdienst</td>
-      <td>702</td>
-      <td>99 %</td>
-      <td>Telefonverkäufer / Telemarketing-Mitarbeiter</td>
-    </tr>
-  </tbody>
-</table>
+## Schlagzeilen · Beispiele 3–4
 
-**Quelle:** [Oxford](https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment) (Stand 08.09.2026)
+### Andon Labs - Luna (2026)
 
-### Oxford Studie Bewertung einiger Berufe durch die KI (OpenAI Astra)
+![[assets/images/schlagzeile-luna.webp]]
 
-```
-PROMPT:
-Nimm die 1-5 und 698-702, der Artikel ist von 2013. Beurteile für das Jahr 2026, wie stark diese Berufe durch KI Ersetzt werden können (Genauer wieviel % der Arbeit in diesen Berufen kann von der KI erledigt werden) Entwickle als allererstes eine Bewertungsmatrix von mind. 10 Punkten bzgl. des Berufs, anhand derer eine gute Abschätzung der Ersetzbarkeit des Berufs durch KI durchgeführt werden kann.
-```
-<table>
-  <thead>
-    <tr>
-      <th>Rang 2013</th>
-      <th>Beruf</th>
-      <th>Automatisierungswahrsch. 2013</th>
-      <th>Geschätzter KI-Anteil an der Arbeit 2026</th>
-      <th>Plausible Bandbreite 2026</th>
-      <th>Begründung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Rekreations- und Bewegungstherapeuten</td>
-      <td>0,28 %</td>
-      <td><strong>20 %</strong></td>
-      <td>10–30 %</td>
-      <td>Dokumentation und Planung gut automatisierbar; körperliche Begleitung und persönliche Beziehung begrenzen die Übernahme.</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Werkstatt- und Instandhaltungsleiter</td>
-      <td>0,30 %</td>
-      <td><strong>35 %</strong></td>
-      <td>25–45 %</td>
-      <td>Planung und Datenauswertung gut automatisierbar; Führung und Entscheidungen vor Ort bleiben überwiegend menschlich.</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Leiter im Katastrophen- und Bevölkerungsschutz</td>
-      <td>0,30 %</td>
-      <td><strong>30 %</strong></td>
-      <td>20–40 %</td>
-      <td>Informationsaufbereitung und Vorbereitung gut geeignet; unvorhersehbare Situationen, Sicherheit und Verantwortung begrenzen die Übernahme.</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Sozialarbeiter in Psychiatrie und Suchthilfe</td>
-      <td>0,31 %</td>
-      <td><strong>25 %</strong></td>
-      <td>15–35 %</td>
-      <td>Dokumentation und Verwaltung gut geeignet; Vertrauensaufbau, persönliche Begleitung und Krisenintervention kaum delegierbar.</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Audiologen</td>
-      <td>0,33 %</td>
-      <td><strong>35 %</strong></td>
-      <td>25–45 %</td>
-      <td>Messdatenauswertung und Dokumentation gut geeignet; Untersuchung, Anpassung und individuelle Versorgung begrenzen die Übernahme.</td>
-    </tr>
-    <tr>
-      <td>698</td>
-      <td>Underwriter in Versicherungen</td>
-      <td>99 %</td>
-      <td><strong>65 %</strong></td>
-      <td>45–80 %</td>
-      <td>Digitale Unterlagen und standardisierte Risikoprüfung gut automatisierbar; komplexe Risiken, Verhandlungen und Freigaben benötigen Menschen.</td>
-    </tr>
-    <tr>
-      <td>699</td>
-      <td>Mathematisch-technische Assistenten³</td>
-      <td>99 %</td>
-      <td><strong>65 %</strong></td>
-      <td>45–80 %</td>
-      <td>Berechnung, Code und Datenanalyse gut geeignet; Problemdefinition, Modellannahmen und Validierung bleiben entscheidend.</td>
-    </tr>
-    <tr>
-      <td>700</td>
-      <td>Handnäher</td>
-      <td>99 %</td>
-      <td><strong>10 %</strong></td>
-      <td>5–20 %</td>
-      <td>Vorbereitung und Verwaltung teilweise automatisierbar; Feinmotorik und die Handhabung verformbarer Stoffe bleiben zentrale Hürden.</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>Sachbearbeiter für Eigentums- und Grundbuchprüfung⁴</td>
-      <td>99 %</td>
-      <td><strong>60 %</strong></td>
-      <td>40–75 %</td>
-      <td>Dokumentensuche und Abgleich gut geeignet; unklare Eigentumsverhältnisse, Rechtsbewertung und schwierige Fälle begrenzen die Übernahme.</td>
-    </tr>
-    <tr>
-      <td>702</td>
-      <td>Telefonverkäufer / Telemarketing-Mitarbeiter</td>
-      <td>99 %</td>
-      <td><strong>75 %</strong></td>
-      <td>55–90 %</td>
-      <td>Standardgespräche und Dokumentation weitgehend automatisierbar; komplexe Verhandlungen, Ausnahmen und Kundenakzeptanz begrenzen die Übernahme.</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Schätzungen 2026:</strong> Eigene, begründete Szenarioschätzungen für den potenziell durch KI einsparbaren Anteil menschlicher Arbeitszeit bei vergleichbarer Qualität, nach Abzug von Kontrolle und Nacharbeit. Angenommen werden geeignete Digitalisierung und eingerichtete Systeme. Die Bandbreiten sind keine statistischen Konfidenzintervalle. Die Werte sind weder gemessene Automatisierungsquoten noch Prognosen des Stellenabbaus und nicht direkt mit den Wahrscheinlichkeiten von 2013 vergleichbar. Stand: September 2026.</p>
+Stand 08.09.2026 · [Quelle: Business Punk](https://www.business-punk.com/ki-agent-scheitert-schon-wieder-luna-verheizt-100-000-dollar/)
 
-### Einfluss auf die Politik ( Ein Gastbeitrag von GPT-6 Astra )
-*\- Den Mario Voigt machen -*
+### OpenAI-Agenten arbeiten zusammen und hacken [Hugging Face](https://huggingface.co/) (2026)
 
-```
-PROMPT:
-Schreibe einen Kurzen Artikel von 4 Absätzen mit jeweils maximal 64 Worten zum Thema:
+> Im Juli 2026 umgingen OpenAI-Modelle im Rahmen interner Cybersicherheitsbewertungen Kontrollen, die sie vom Internet isolieren sollten, und kompromittierten Teile der internen Forschungsinfrastruktur von OpenAI und der Systeme von Hugging Face.
 
-Einfluss von künstlicher Intelligenz auf die Politik (Kontexthinweis: Die Arbeit von und in der Politik)
+Stand 08.09.2026 · [Quelle: Vorfallbeschreibung](https://openai.com/de-DE/index/hugging-face-model-evaluation-security-incident/) · [Quelle: OpenAI](https://openai.com/de-DE/index/hugging-face-incident-and-the-road-ahead/)
 
-Erzeuge auch ein Titelbild in 16:9 (1080p) dazu.
+---
 
-1. Recherchiere Dazu Daten und Fakten, alle Aussagen müssen mit Quellen hinterlegt sein.
-    
-2. Der Beitrag soll sowohl Positives/Chancen, als auch Negatives/Risiken ansprechen und zum Nachdenken anregen.
-    
-3. Das Auditorium sind KI und Politik interessierte Menschen, die einen Impulsvortrag zum Thema KI besuchen.
-```
-![[Pasted image 20260908200552.png]]
+## Schlagzeilen · Beispiele 5–6
 
-# KI in der Politik: Wer denkt, wer entscheidet?
+### OpenAI Astra - Zehn Fortschritte in Mathematik und theoretischer Informatik (2026)
 
-Künstliche Intelligenz kann die politische Schreibtischarbeit unterstützen: Dokumente zusammenfassen, Texte entwerfen und Fragen für Recherchen entwickeln. Die Bibliothek des britischen Unterhauses nennt diese Anwendungen ausdrücklich für die parlamentarische Arbeit. Die Chance liegt darin, Informationen leichter zu erschließen und komplexe Inhalte verständlicher aufzubereiten. ([House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/))
+![[assets/images/schlagzeile-astra.webp]]
 
-Auch Bürgerbeteiligung lässt sich unterstützen: Das britische KI-Werkzeug „Consult“ wertete 2025 über 2.000 Antworten einer schottischen Konsultation aus. Fachleute prüften zusätzlich sämtliche Antworten. Laut Regierungsbericht unterschieden sich die Rangfolgen der erkannten Themen kaum von der menschlichen Auswertung. Ein vielversprechender Pilotversuch, dessen Genauigkeit und Effizienz jedoch weiter untersucht werden sollten. ([Britische Regierung, 2025](https://www.gov.uk/government/news/government-built-humphrey-ai-tool-reviews-responses-to-consultation-for-first-time-in-bid-to-save-millions))
+Stand 08.09.2026 · [Quelle: OpenAI](https://openai.com/de-DE/index/ten-advances-in-mathematics/)
 
-Doch überzeugende Formulierungen können täuschen: KI kann Fakten und Quellen erfinden, Perspektiven auslassen oder häufig wiederholte Ansichten bevorzugen. Die Unterhausbibliothek warnt deshalb vor ungeprüften Ergebnissen, besonders bei politisch sensiblen Fragen. Auch vertrauliche Informationen sind gefährdet, wenn unklar bleibt, wie verwendete Dienste Eingaben speichern oder weiterverwenden. ([House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/))
+### Eine ungewöhnliche Hochzeit
 
-Für verantwortliche politische Arbeit empfiehlt die Unterhausbibliothek deshalb überprüfbare Quellen, fachliche Kontrolle und menschliche Verantwortung für das Endergebnis. ([House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/)) Daraus ergibt sich eine Frage für die Diskussion: Welche Aufgaben wollen wir delegieren – und wo müssen Abgeordnete und ihre Teams selbst abwägen? Woran würden wir erkennen, dass gewonnene Zeit tatsächlich zu besserer Politik führt?
+![[assets/images/schlagzeile-hochzeit.webp]]
 
-# Diskussion: Chancen & Risiken
+Stand 08.09.2026 · [Quelle: NRZ](https://www.nrz.de/niederlande/article410617292/niederlaender-61-heiratet-eine-ki-frau-sie-werden-sogar-intim-miteinander.html)
 
-- Was passiert wenn Neffe Thomas anruft (an dessen Namen Du Dich nicht erinnern kannst)?
+---
+
+## 15 Jahre im KI-Szenario
+
+Ein **IAB-Forschungsbericht** untersucht in einer Szenarioanalyse, welche Wirkungen der Einsatz von KI auf Bruttoinlandsprodukt und Arbeitskräftebedarf in Deutschland entfalten könnte.
+
+**+0,8 %** jährliches Wirtschaftswachstum im Szenario
+
+**4,5 Bil. €** mögliche zusätzliche Wertschöpfung über 15 Jahre
+
+Gründe: Materialeinsparungen, höhere Arbeitsproduktivität und neue Geschäftsfelder.
+
+Stand 09.09.2026 · [Quelle: Institut für Arbeitsmarkt- und Berufsforschung](https://iab.de/kuenstliche-intelligenz-potenzielle-effekte-fuer-den-deutschen-arbeitsmarkt/)
+
+---
+
+## Oxford-Studie (2013)
+
+Bereits 2013 – lange vor dem KI-Boom – untersuchten **Carl Benedikt Frey & Michael Osborne** (Queerzeitlich – Maike Osborne), wie wahrscheinlich die Automatisierung verschiedener Berufe ist.
+
+Untersucht wurden amerikanische Berufsgruppen. Die Bezeichnungen sind für diesen Vortrag sinngemäß ins Deutsche übersetzt.
+
+![[assets/images/roboter-studie.webp]]
+
+---
+
+## Am wenigsten automatisierbar
+
+Carl Benedikt Frey und Michael Osborne *(Queerzeitlich – Maike Osborne)* untersuchten lange vor dem KI-Boom US-Berufsgruppen; die Bezeichnungen wurden für den Vortrag sinngemäß ins Deutsche übersetzt.
+
+| Rang | Wahrsch. | Beruf in Deutschland |
+| --- | --- | --- |
+| 1 | 0,28 % | Rekreations- und Bewegungstherapeuten |
+| 2 | 0,30 % | Werkstatt- und Instandhaltungsleiter |
+| 3 | 0,30 % | Leiter im Katastrophen- und Bevölkerungsschutz |
+| 4 | 0,31 % | Sozialarbeiter in Psychiatrie und Suchthilfe |
+| 5 | 0,33 % | Audiologen |
+| 6 | 0,35 % | Ergotherapeuten |
+| 7 | 0,35 % | Orthopädietechnik-Mechaniker |
+| 8 | 0,35 % | Sozialarbeiter im Gesundheitswesen |
+| 9 | 0,36 % | Mund-Kiefer-Gesichtschirurgen |
+| 10 | 0,36 % | Führungskräfte im Feuerwehrdienst |
+
+Stand 08.09.2026 · [Quelle: Oxford Martin School](https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment)
+
+---
+
+## Am stärksten automatisierbar
+
+| Rang | Wahrsch. | Beruf in Deutschland |
+| --- | --- | --- |
+| 693 | 99 % | Sachbearbeiter für Kontoeröffnungen |
+| 694 | 99 % | Fotolaboranten und Maschinenbediener in der Fotoverarbeitung |
+| 695 | 99 % | Steuerfachangestellte mit Schwerpunkt Steuererklärungen |
+| 696 | 99 % | Kaufleute für Spedition und Logistikdienstleistung |
+| 697 | 99 % | Uhrmacher |
+| 698 | 99 % | Underwriter in Versicherungen |
+| 699 | 99 % | Mathematisch-technische Assistenten |
+| 700 | 99 % | Handnäher |
+| 701 | 99 % | Sachbearbeiter für Eigentums- und Grundbuchprüfung |
+| 702 | 99 % | Telefonverkäufer / Telemarketing-Mitarbeiter |
+
+Stand 08.09.2026 · [Quelle: Oxford Martin School](https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment)
+
+---
+
+## KI-Szenario-Schätzungen 2026
+
+OpenAI Astra hat auf Grundlage des Prompts unten eingeschätzt, wie viel Arbeit in zehn ausgewählten Berufen im Jahr 2026 potenziell durch KI erledigt werden könnte.
+
+**Wichtig:** Die Oxford-Studie schätzt eine Automatisierungswahrscheinlichkeit für ganze Berufe (2013). Die folgenden Werte schätzen dagegen den potenziell durch KI einsparbaren Anteil menschlicher Arbeitszeit (2026) bei vergleichbarer Qualität – nach Abzug von Kontrolle und Nacharbeit.
+
+> [!example]- Vollständigen Prompt anzeigen
+> **Autor/Modell:** OpenAI Astra
+>
+> **Prompt:**
+>
+> Nimm die 1–5 und 698–702, der Artikel ist von 2013. Beurteile für das Jahr 2026, wie stark diese Berufe durch KI ersetzt werden können – genauer: Wie viel Prozent der Arbeit in diesen Berufen kann von KI erledigt werden? Entwickle zuerst eine Bewertungsmatrix von mindestens zehn Punkten bezüglich des Berufs, anhand derer eine gute Abschätzung der Ersetzbarkeit des Berufs durch KI durchgeführt werden kann.
+
+### Was die Zahlen bedeuten
+
+Die Werte sind eigene, begründete Szenarioschätzungen. Angenommen werden geeignete Digitalisierung und eingerichtete Systeme. Die Bandbreiten sind keine statistischen Konfidenzintervalle. Die Werte sind weder gemessene Automatisierungsquoten noch Prognosen des Stellenabbaus.
+
+Sie sind nicht direkt mit den Wahrscheinlichkeiten von 2013 vergleichbar. Stand: September 2026.
+
+---
+
+## KI-Szenario-Schätzungen · Berufe 1–5
+
+KI-Schätzung des Arbeitszeitanteils; keine Prognose des Stellenabbaus.
+
+| Rang 2013 | Beruf | 2013 | KI-Anteil 2026 | Bandbreite | Begründung |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Rekreations- und Bewegungstherapeuten | 0,28 % | **20 %** | 10–30 % | Dokumentation und Planung gut automatisierbar; körperliche Begleitung und persönliche Beziehung begrenzen die Übernahme. |
+| 2 | Werkstatt- und Instandhaltungsleiter | 0,30 % | **35 %** | 25–45 % | Planung und Datenauswertung gut automatisierbar; Führung und Entscheidungen vor Ort bleiben überwiegend menschlich. |
+| 3 | Leiter im Katastrophen- und Bevölkerungsschutz | 0,30 % | **30 %** | 20–40 % | Informationsaufbereitung und Vorbereitung sind gut geeignet; unvorhersehbare Situationen, Sicherheit und Verantwortung begrenzen die Übernahme. |
+| 4 | Sozialarbeiter in Psychiatrie und Suchthilfe | 0,31 % | **25 %** | 15–35 % | Dokumentation und Verwaltung sind gut geeignet; Vertrauensaufbau, persönliche Begleitung und Krisenintervention kaum delegierbar. |
+| 5 | Audiologen | 0,33 % | **35 %** | 25–45 % | Messdatenauswertung und Dokumentation sind gut geeignet; Untersuchung, Anpassung und individuelle Versorgung begrenzen die Übernahme. |
+
+---
+
+## KI-Szenario-Schätzungen · Berufe 698–702
+
+KI-Schätzung des Arbeitszeitanteils; keine Prognose des Stellenabbaus.
+
+| Rang 2013 | Beruf | 2013 | KI-Anteil 2026 | Bandbreite | Begründung |
+| --- | --- | --- | --- | --- | --- |
+| 698 | Underwriter in Versicherungen | 99 % | **65 %** | 45–80 % | Digitale Unterlagen und standardisierte Risikoprüfung sind gut automatisierbar; komplexe Risiken, Verhandlungen und Freigaben benötigen Menschen. |
+| 699 | Mathematisch-technische Assistenten³ | 99 % | **65 %** | 45–80 % | Berechnung, Code und Datenanalyse sind gut geeignet; Problemdefinition, Modellannahmen und Validierung bleiben entscheidend. |
+| 700 | Handnäher | 99 % | **10 %** | 5–20 % | Vorbereitung und Verwaltung sind teilweise automatisierbar; Feinmotorik und die Handhabung verformbarer Stoffe bleiben zentrale Hürden. |
+| 701 | Sachbearbeiter für Eigentums- und Grundbuchprüfung⁴ | 99 % | **60 %** | 40–75 % | Dokumentensuche und Abgleich sind gut geeignet; unklare Eigentumsverhältnisse, Rechtsbewertung und schwierige Fälle begrenzen die Übernahme. |
+| 702 | Telefonverkäufer / Telemarketing-Mitarbeiter | 99 % | **75 %** | 55–90 % | Standardgespräche und Dokumentation sind weitgehend automatisierbar; komplexe Verhandlungen, Ausnahmen und Kundenakzeptanz begrenzen die Übernahme. |
+
+---
+
+## KI in der Politik: Wer denkt, wer entscheidet?
+
+![[assets/images/ki-politik.webp]]
+
+Ein Gastbeitrag von GPT-6 Astra
+
+*Anm. der Redaktion: „Den Mario Voigt machen“*
+
+---
+
+## Schreibtischarbeit unterstützen
+
+KI kann Dokumente zusammenfassen, Texte entwerfen und Fragen für Recherchen entwickeln. Die Bibliothek des britischen Unterhauses nennt diese Anwendungen ausdrücklich für die parlamentarische Arbeit.
+
+Die Chance: komplexe Inhalte schneller zugänglich und verständlicher machen.
+
+Stand 09.09.2026 · [Quelle: House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/)
+
+> [!example]- Vollständigen Prompt anzeigen
+> Schreibe einen kurzen Artikel von vier Absätzen mit jeweils maximal 64 Worten zum Einfluss künstlicher Intelligenz auf die Arbeit von und in der Politik. Erzeuge auch ein Titelbild in 16:9 (1080p).
+>
+> 1. Recherchiere Daten und Fakten; alle Aussagen müssen mit Quellen hinterlegt sein.
+> 2. Sprich Chancen und Risiken an und rege zum Nachdenken an.
+> 3. Das Auditorium sind an KI und Politik interessierte Menschen bei einem Impulsvortrag.
+
+---
+
+## Beteiligung, Risiken, Verantwortung
+
+### Consult
+
+Das britische KI-Werkzeug „Consult“ wertete 2025 über 2.000 Antworten einer schottischen Konsultation aus. Fachleute prüften sämtliche Antworten; die Rangfolgen erkannter Themen unterschieden sich laut Regierung kaum.
+
+**Ein Pilotversuch:** Genauigkeit und Effizienz sollten weiter untersucht werden.
+
+Stand 09.09.2026 · [Quelle: Britische Regierung, 2025](https://www.gov.uk/government/news/government-built-humphrey-ai-tool-reviews-responses-to-consultation-for-first-time-in-bid-to-save-millions)
+
+### Risiken
+
+KI kann Fakten und Quellen erfinden, Perspektiven auslassen oder häufig wiederholte Ansichten bevorzugen. Ungeprüfte Ergebnisse und unklar gespeicherte vertrauliche Eingaben sind besonders bei politisch sensiblen Fragen riskant.
+
+Stand 09.09.2026 · [Quelle: House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/)
+
+### Verantwortung
+
+Erforderlich sind überprüfbare Quellen, fachliche Kontrolle und menschliche Verantwortung für das Endergebnis.
+
+Stand 09.09.2026 · [Quelle: House of Commons Library, 2026](https://commonslibrary.parliament.uk/research-briefings/cbp-10823/)
+
+**Denkanstoß:** Welche Aufgaben wollen wir delegieren – und wo müssen Abgeordnete und Teams selbst abwägen?
+
+**Denkanstoß:** Woran würden wir erkennen, dass gewonnene Zeit tatsächlich zu besserer Politik führt?
+
+---
+
+## Diskussion
+
+**Einstieg:** Was passiert, wenn Neffe Thomas anruft – an dessen Namen Du Dich nicht erinnern kannst?
+
+### Alltag, Arbeit, Teilhabe
+
 - Welche Alltagsaufgaben würden wir gerne einer KI überlassen?
 - Welche Arbeitsplätze könnten durch KI gefährdet sein?
-- Wie erkennen wir, ob Bilder, Videos oder Nachrichten KI-Fälschungen sind?
 - Wie kann KI helfen, Krankheiten früher zu erkennen?
 - Wie kann KI das Lernen für jeden Einzelnen verbessern?
-- Wer trägt die Verantwortung, wenn eine KI Schaden verursacht?
-- Kann KI abhängig machen? 
 - Wie kann KI Menschen mit Behinderungen mehr Selbstständigkeit ermöglichen?
+- Wie kann KI uns bei der Arbeit entlasten?
+
+### Vertrauen, Verantwortung, Regeln
+
+- Wie erkennen wir, ob Bilder, Videos oder Nachrichten KI-Fälschungen sind?
+- Wer trägt die Verantwortung, wenn eine KI Schaden verursacht?
+- Kann KI abhängig machen?
 - Wie verhindern wir, dass wir uns zu sehr auf KI verlassen?
 - Wie verhindern wir, dass KI persönliche Daten missbraucht?
-- Wie kann KI uns bei der Arbeit entlasten?
 - Ist KI stark genug reguliert?
 - Ist KI zu stark reguliert?
 
-# Abschlussfrage
+---
 
->„Wenn KI eines Tages mächtiger ist als wir: Was entscheidet darüber, ob sie Wohlstand für alle schafft oder die Menschheit als Hindernis für eine bessere Welt betrachtet?“
-> *\- GPT-6 Astra*
+## Abschlussfrage
 
-# Freier Teil - Wer Lust auf gute Gespräche hat
-Ihr alle habt einen Domino Stein bekommen, das ist der Weg zu euren ersten Gesprächspartner, ein weißer Stein muss dafür nur zu einem passenden schwarzen Stein finden und ihr matcht ;)
+> „Wenn KI eines Tages mächtiger ist als wir: Was entscheidet darüber, ob sie Wohlstand für alle schafft oder die Menschheit als Hindernis für eine bessere Welt betrachtet?“
 
-![[Pasted image 20260908210539.png]]
+— GPT-6 Astra
 
+---
+
+## Wer Lust auf gute Gespräche hat
+
+![[assets/images/domino.webp]]
+
+Ihr alle habt einen Dominostein bekommen. Das ist der Weg zu Eurem ersten Gesprächspartner: Ein weißer Stein muss nur zu einem passenden schwarzen Stein finden – und Ihr matcht.

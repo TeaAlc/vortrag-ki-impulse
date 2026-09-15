@@ -9,14 +9,14 @@ usefulness = 0
 [[entries]]
 date = "2026-09-09"
 category = "Repository"
-insight = "The source Vault is `KI Impulse`; the portable presentation is delivered separately in `KI Impulse HTML`. Never rename or modify Vault media when preparing the slideshow."
+insight = "The Obsidian note is `markdown/KI Impulse.md`; the browser presentation is `docs/index.html`. Markdown media live in `markdown/assets/`, with static WebP images and local audio embeds."
 usefulness = 2
 
 [[entries]]
 date = "2026-09-09"
 category = "User Instruction"
 insight = "Do not expose internal theme rationale or implementation notes in the presentation content; keep slides audience-facing."
-usefulness = 2
+usefulness = 3
 
 [[entries]]
 date = "2026-09-09"
@@ -34,4 +34,4 @@ usefulness = 2
 date = "2026-09-09"
 category = "User Instruction"
 insight = "Keep the Neffe Thomas discussion question unresolved. Do not add explanations, spoiler hints, or explicit voice-cloning connections; the audience should discover and discuss the implication."
-usefulness = 0
+usefulness = 1
